@@ -9,7 +9,7 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Yash's Homepage'"
+title                    : "Yash's Homepage"
 title_separator          : "-"
 name                     : &name "Yash Bhardwaj"
 description              : &description "personal description"
@@ -27,14 +27,14 @@ author:
   pronouns         : # example: "she/her"  
   bio              : "AI Researcher"
   location         : "Paris, France"
-  employer         : "Ecole Polytechnique (Institute Polytechnique de Paris)"
+  employer         : "Ecole Polytechnique (IP Paris)"
   uri              : # URL
   email            : "yash.bhardwaj@zimbra.polytechnique.fr" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?hl=en&user=JrVHBGIAAAAJ"
   inspire-hep      : # URL
   impactstory      : # URL
   orcid            : "https://orcid.org/0009-0000-8179-7151"
@@ -62,7 +62,7 @@ author:
   keybase          : # Usernameinked
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : yash-bhardwaj-tec/
+  linkedin         : yash-bhardwaj-tech/
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username

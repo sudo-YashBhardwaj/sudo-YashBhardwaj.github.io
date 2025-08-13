@@ -9,13 +9,13 @@ redirect_from:
 ---
 
 ![Illustration of combining vision and language modalities](/image/image_to_text_vis.png){: .align-right width = "300px"}
-👨🏻‍🎓 I’m a master’s student in **Trustable & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**/
+👨🏻‍🎓 I’m a master’s student in **Trustworthy & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**/
 
 🔬 My research interests are at the intersection of **multimodal AI** (vision, audio and language) and **reliable/efficient LLM & VLM systems**. 
 
 📚 I am currently collaborating with Georgia Tech’s **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on problems in multimodal finance.
 
-🔎 **Actively seeking research internships (Spring/Summer 2026)** in **multimodal learning**, **alignment**, and **training LLMs/VLMs** — Europe (FR/EU) preferred, open worldwide.
+🔎 **Actively seeking research internships (Spring/Summer 2026)** in **multimodal learning**, **alignment**, and **training LLMs/VLMs** - Europe (FR/EU) preferred, open worldwide.
 > 
 > I love end-to-end work: data → modeling → eval → lightweight demos.
 
@@ -32,9 +32,9 @@ redirect_from:
 - **Multimodal captioning pipeline:** Generating dense-video captions on varying combination of modalities (video, audio, text) across model families (OpenAI, Qwen, Gemini, Phi, etc.) and evaluation using reference free methods (GEval, PAC-S)
 
 ### Background
-- 🎓 **MSc&T (TRAI)** — [École Polytechnique](https://www.polytechnique.edu/en) (current)  
-- 🎓 **B.E., Computer Science** — [BITS Pilani](https://www.bits-pilani.ac.in/), India
-- 🧪 **Research** — [Georgia Tech](https://www.gatech.edu/) (multimodal finance), [IIIT-Delhi](https://midas.iiitd.ac.in/bio) (author profiling, citation/keyphrase gen)
+- 🎓 **MSc&T Trustworthy and Responsible AI (M1)**: [École Polytechnique](https://www.polytechnique.edu/en) (current)  
+- 🎓 **B.E., Computer Science**: [BITS Pilani](https://www.bits-pilani.ac.in/), India
+- 🧪 **Research**: [Georgia Tech](https://www.gatech.edu/) (multimodal finance), [IIIT-Delhi](https://midas.iiitd.ac.in/bio) (author profiling, citation/keyphrase gen)
 
 
 ### Let’s collaborate
