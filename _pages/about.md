@@ -8,7 +8,8 @@ redirect_from:
   - /about.html
 ---
 
-![Illustration of combining vision and language modalities](/images/multi_modal_ai.png){: .align-right width = "300px"}
+![Illustration of combining vision and language modalities](/images/multi_modal_ai.png){: .align-right width="300px"}
+
 👨🏻‍🎓 I’m a master’s student in **Trustworthy & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**/
 
 🔬 My research interests are at the intersection of **multimodal AI** (vision, audio and language) and **reliable/efficient LLM & VLM systems**. 
