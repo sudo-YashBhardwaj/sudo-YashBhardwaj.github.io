@@ -28,9 +28,19 @@ redirect_from:
 
 # Selected Highlights
 
-## Research Experiences
-- **[VideoConviction (KDD 2025)](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5315526):** Benchmarking conviction of YouTube fin-fluencer's stock market recommendations.
-- **Multimodal captioning pipeline:** Generating dense-video captions on varying combination of modalities (video, audio, text) across model families (OpenAI, Qwen, Gemini, Phi, etc.) and evaluation using reference free methods (GEval, PAC-S)
+## Publications
+- **[VideoConviction (KDD 2025)](https://doi.org/10.1145/3711896.3737417):**  
+  Introduced the first expert-annotated **multimodal finance benchmark**, capturing *conviction* in stock market recommendations from YouTube finfluencers.  
+  - 6,000+ annotations across 288 videos (43 hrs), 457 annotation hours.  
+  - Benchmarks LLMs and MLLMs on ticker/action/conviction extraction.  
+  - Portfolio analysis shows inverse strategies (betting against finfluencers) outperform S&P 500 but with higher risk.  
+  - Dataset + code released on [GitHub](https://github.com/gtfintechlab/VideoConviction) / [Hugging Face](https://huggingface.co/datasets/gtfintechlab/VideoConviction).
+
+- **[FinCap (ICCV 2025)](https://arxiv.org/abs/2509.25745):**  
+  Multimodal captioning benchmark for financial videos.  
+  - Generates dense captions across **video, audio, text, and descriptions**.  
+  - Evaluates diverse model families (OpenAI, Gemini, Qwen, Phi, etc.).  
+  - Uses **reference-free evaluation** (G-Eval, PAC-S) to assess informativeness and alignment.
 
 ### Background
 - 🎓 **MSc&T Trustworthy and Responsible AI (M1)**: [École Polytechnique](https://www.polytechnique.edu/en) (current)  
