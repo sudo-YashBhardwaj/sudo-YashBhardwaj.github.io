@@ -1,5 +1,6 @@
 ---
-title: "Real-Time Multimodal Emotion Recognition and Summarization<br/><img src='/images/emotion_recognition.png'>"
+title: "Real-Time Multimodal Emotion Recognition and Summarization"
+excerpt: "A production-ready Python application implementing real-time multimodal emotion recognition through a modular architecture with concurrent processing pipelines.<br/><img src='/images/emotion_recognition.png'>"
 collection: portfolio
 ---
 

@@ -1,5 +1,6 @@
 ---
-title: "MedClip-Mini: A Compact CLIP-style Model for Medical Image-Text Pairs<br/><img src='/images/clip_image.png'>"
+title: "MedClip-Mini: A Compact CLIP-style Model for Medical Image-Text Pairs"
+excerpt: "A lightweight CLIP-style model designed for medical imaging applications, trained using contrastive learning on the ROCO dataset.<br/><img src='/images/clip_image.png'>"
 collection: portfolio
 ---
 
