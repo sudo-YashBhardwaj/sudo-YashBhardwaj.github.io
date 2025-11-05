@@ -1,6 +1,6 @@
 ---
 title: "Bias Detection and Mitigation Framework"
-excerpt: "A Python-based framework to detect and mitigate gender bias in loan approval predictions using logistic regression and fairness techniques.<br/><img src='/images/bias_mitigation.png'>"
+excerpt: "A Python-based framework to detect and mitigate gender bias in loan approval predictions using logistic regression and fairness techniques.<br/><img src='/images/bias_mitigation.png' width='600'>"
 collection: portfolio
 ---
 

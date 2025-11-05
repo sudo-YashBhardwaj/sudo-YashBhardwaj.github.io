@@ -1,6 +1,6 @@
 ---
 title: "Named Entity Recognition with Bi-LSTM"
-excerpt: "A deep learning-based Named Entity Recognition (NER) system implemented using Keras and TensorFlow, featuring a bidirectional LSTM architecture for sequence labeling tasks.<br/><img src='/images/NER.png'>"
+excerpt: "A deep learning-based Named Entity Recognition (NER) system implemented using Keras and TensorFlow, featuring a bidirectional LSTM architecture for sequence labeling tasks.<br/><img src='/images/NER.png' width='600'>"
 collection: portfolio
 ---
 
