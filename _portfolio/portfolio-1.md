@@ -1,9 +1,9 @@
 ---
-title: "Bias Detection and Mitigation Framework"
-excerpt: "A Python-based framework to detect and mitigate gender bias in loan approval predictions using logistic regression and fairness techniques.<br/><img src='/images/bias_mitigation.png'>"
+title: "Real-Time Multimodal Emotion Recognition and Summarization<br/><img src='/images/emotion_recognition.png'>"
 collection: portfolio
 ---
 
-This project presents a comprehensive framework for detecting and mitigating bias in machine learning models, with a focus on gender bias in loan approval predictions. Using Python, logistic regression, and IBM's AIF360 toolkit, it identifies unfairness through metrics like Disparate Impact, Statistical Parity Difference, and group-specific error rates. The framework applies preprocessing bias mitigation methods such as Reweighting and Disparate Impact Remover, then reevaluates fairness and performance post-mitigation. Results show significant improvements in equity, reducing adverse effects on unprivileged groups, demonstrating how bias-aware modeling can promote fairer decision-making in AI systems. 
+A production-ready Python application implementing real-time multimodal emotion recognition through a modular architecture with concurrent processing pipelines. Processes three modalities in parallel: video frames (MTCNN face detection + DeepFace ensemble model for 7-class facial expression recognition with multi-face support), audio streams (OpenAI Whisper for speech-to-text at 16kHz/1024-sample blocks + RoBERTa-base-go-emotions for speech emotion recognition), and transcribed text (RoBERTa-base-go-emotions for semantic emotion analysis). The system employs a multi-threaded input manager with queue-based buffering (queue.Queue maxsize=10) for thread-safe data transfer, timestamp-based synchronization across modalities, and a late fusion engine implementing priority-based selection (Text > Video > Audio) with agreement-based confidence scoring (0.5-0.9 range). Real-time visualization uses OpenCV drawing primitives for emotion overlays and bounding boxes. The emotion tracker maintains temporal history via time-series data structures for statistics computation (distribution analysis, timeline patterns, strong emotion detection). Performance: ~100-300ms latency per frame, ~2-3 fps throughput, supports CUDA acceleration for PyTorch models. Built with fallback mechanisms (OpenCV Haar Cascades for face detection), error handling, and performance optimization for CPU/GPU deployment.
 
-**[GitHub] {https://github.com/sudo-YashBhardwaj/bias-detection-and-mitigation}**
+**[GitHub] {https://github.com/sudo-YashBhardwaj/Multimodal-Emotion-Recogniton}**
+
