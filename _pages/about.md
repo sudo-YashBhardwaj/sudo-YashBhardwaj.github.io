@@ -12,17 +12,17 @@ redirect_from:
 
 👨🏻‍🎓 I’m a master’s student in **Trustworthy & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**
 
-🔬 My research interests are at the intersection of **multimodal AI** (vision, audio and language) and **reliable/efficient LLM & VLM systems**. 
+🔬 My research interests are at the intersection of **multimodal AI** (vision, audio and language), Diffusion Models, and **reliable/efficient LLM & VLM systems**. 
 
-📚 I am currently collaborating with Georgia Tech’s **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on problems in multimodal finance.
+📚 I have previously worked with Georgia Tech’s **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on problems in multimodal finance.
 
-🔎 **Actively seeking research internships (Spring/Summer 2026)** in **multimodal learning**, **alignment**, and **training LLMs/VLMs** - Europe (FR/EU) preferred, open worldwide.
+🔎 **Actively seeking research internships (Spring/Summer 2026)** in **multimodal learning**, **diffusion models**, and **training LLMs/VLMs** - Europe (FR/EU) preferred, open worldwide.
 > 
 > I love end-to-end work: data → modeling → eval → lightweight demos.
 
 ### What I’m focused on now
 - 🎥 **Multimodal learning & generation:** Video–audio–text fusion, long-range temporal reasoning, controllable generation.
-- 👁️ **Computer vision:** Video understanding, detection/segmentation, retrieval, vision-language grounding.
+- 👁️ **Computer vision:** Video understanding, detection/segmentation, retrieval, vision-language grounding, diffusion models.
 - 🧩 **Alignment & reliability:** Preference/contrastive learning, eval pipelines, robustness/bias checks, model monitoring.
 - ⚙️ **Systems & efficiency:** Memory/latency-aware inference, reproducible data/workflows, simple productizable demos.
 
@@ -49,5 +49,5 @@ redirect_from:
 
 
 ### Let’s collaborate
-I’m especially interested in **alignment for VLMs**, **multimodal representation learning**, **evaluation of generative models**, and **efficient training/inference**.  
+I’m especially interested in **modality fusion for VLMs**, **multimodal representation learning**, **diffusion models**, and **efficient training/inference**.  
 If you’re building in these areas, I’d love to chat about internships or collaborations.
