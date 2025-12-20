@@ -9,15 +9,14 @@
 
 main:
   - title: "CV"
-    url: /files/Yash_Bhardwaj.pdf
+    url: /files/Yash_Bhardwaj_Vision.pdf
+    
+  - title: "Portfolio"
+    url: /portfolio/
 
   - title: "Publications"
     # url: /publications/
     url: https://scholar.google.com/citations?user=JrVHBGIAAAAJ&hl=en
-    
-  - title: "Portfolio"
-    url: /portfolio/
-        
   # - title: "Blog Posts"
   #   url: /year-archive/
 
