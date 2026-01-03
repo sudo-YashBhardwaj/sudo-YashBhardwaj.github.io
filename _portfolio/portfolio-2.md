@@ -1,16 +1,16 @@
 ---
-title: "Real-Time Multimodal Emotion Recognition and Summarization"
-excerpt: "Production-ready real-time emotion recognition system processing video, audio, and text in parallel with sub-300ms latency, implementing advanced fusion algorithms and multi-threaded architecture for live emotion analysis.<br/><img src='/images/emotion_recognition.png' width='600'>"
+title: "Emotional Scene Generation with Stable Diffusion"
+excerpt: "Advanced research framework for emotion-conditioned image generation, implementing three novel approaches (LoRA fine-tuning, classifier guidance, multimodal conditioning) on 118K+ image datasets with comprehensive evaluation pipelines.<br/><img src='/images/emotional_project.png' width='600'>"
 collection: portfolio
 ---
 
-A production-ready real-time multimodal emotion recognition system processing video, audio, and text streams concurrently with sub-300ms latency per frame.
+A production-ready research framework for emotion-conditioned image generation using Stable Diffusion v1.5, implementing three approaches on large-scale datasets (EmoSet-118K, RAFDB).
 
-**Innovation Highlights:** (1) Parallel processing with dedicated pipelines for video (MTCNN + DeepFace ensemble), audio (Whisper + RoBERTa), and text (RoBERTa), (2) Late fusion engine with priority-based selection (Text > Video > Audio) and confidence scoring, (3) Multi-threaded architecture with queue-based buffering and timestamp synchronization.
+**Innovation Highlights:** (1) LoRA fine-tuning with learned emotion token embeddings for controllable generation across 8 emotion classes with minimal overhead (~25MB vs 4GB base model), (2) Noise-aware latent CNN classifier (~2M parameters) enabling gradient-based guidance without UNet fine-tuning, (3) Multimodal conditioning combining BLIP captions with EmotionCLIP embeddings.
 
-**Technical Excellence:** Real-time visualization with OpenCV, temporal emotion tracking for pattern analysis, and performance optimization achieving ~100-300ms latency per frame with ~2-3 fps throughput.
+**Technical Excellence:** End-to-end ML pipelines with automated preprocessing, distributed training (HuggingFace Accelerate), and evaluation using EmotionCLIP/ViT classifiers with confusion matrices and per-emotion metrics.
 
-**Engineering Best Practices:** CUDA-accelerated inference, fallback mechanisms, and cross-platform deployment. Demonstrates expertise in multimodal learning, real-time systems, concurrent programming, computer vision, and NLP.
+**Engineering Best Practices:** Modular architecture, CUDA-optimized inference, and production-ready code with error handling. Demonstrates expertise in diffusion models, transfer learning (LoRA), gradient-based optimization, and multimodal learning.
 
-**[GitHub](https://github.com/sudo-YashBhardwaj/Multimodal-Emotion-Recogniton)**
+**[GitHub](https://github.com/sudo-YashBhardwaj/EmotionalSceneGeneration)**
 

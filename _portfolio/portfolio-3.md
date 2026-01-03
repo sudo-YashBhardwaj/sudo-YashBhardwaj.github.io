@@ -1,15 +1,16 @@
 ---
-title: "MedClip-Mini: A Compact CLIP-style Model for Medical Image-Text Pairs"
-excerpt: "Lightweight CLIP-style model (~50M parameters) for medical imaging achieving strong zero-shot performance (Recall@1: 0.28, Recall@10: 0.55) on ROCO dataset with efficient FAISS-based retrieval and cross-platform deployment.<br/><img src='/images/clip_image.png' width='600'>"
+title: "Real-Time Multimodal Emotion Recognition and Summarization"
+excerpt: "Production-ready real-time emotion recognition system processing video, audio, and text in parallel with sub-300ms latency, implementing advanced fusion algorithms and multi-threaded architecture for live emotion analysis.<br/><img src='/images/emotion_recognition.png' width='600'>"
 collection: portfolio
 ---
 
-A compact CLIP-style model optimized for medical imaging, achieving strong zero-shot performance with minimal computational overhead.
+A production-ready real-time multimodal emotion recognition system processing video, audio, and text streams concurrently with sub-300ms latency per frame.
 
-**Innovation Highlights:** (1) Dual-encoder architecture (ResNet-18 + DistilBERT) with InfoNCE contrastive loss, (2) Model compression to ~50M parameters (vs 400M+ in standard CLIP) achieving Recall@1: 0.28 and Recall@10: 0.55 on ROCO, (3) FAISS-based indexing for efficient similarity search with sub-second query times.
+**Innovation Highlights:** (1) Parallel processing with dedicated pipelines for video (MTCNN + DeepFace ensemble), audio (Whisper + RoBERTa), and text (RoBERTa), (2) Late fusion engine with priority-based selection (Text > Video > Audio) and confidence scoring, (3) Multi-threaded architecture with queue-based buffering and timestamp synchronization.
 
-**Technical Excellence:** End-to-end pipeline with contrastive learning on ROCO dataset, comprehensive evaluation metrics, and production-ready inference with batch processing.
+**Technical Excellence:** Real-time visualization with OpenCV, temporal emotion tracking for pattern analysis, and performance optimization achieving ~100-300ms latency per frame with ~2-3 fps throughput.
 
-**Engineering Best Practices:** Cross-platform deployment (MPS, CUDA, CPU) and modular architecture. Demonstrates expertise in contrastive learning, vision-language models, model compression, and medical AI.
+**Engineering Best Practices:** CUDA-accelerated inference, fallback mechanisms, and cross-platform deployment. Demonstrates expertise in multimodal learning, real-time systems, concurrent programming, computer vision, and NLP.
 
-**[GitHub](https://github.com/sudo-YashBhardwaj/MedClip-Mini)**
+**[GitHub](https://github.com/sudo-YashBhardwaj/Multimodal-Emotion-Recogniton)**
+

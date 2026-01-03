@@ -1,16 +1,15 @@
 ---
-title: "Named Entity Recognition with Bi-LSTM"
-excerpt: "Deep learning NER system achieving 98% accuracy on general text and 70.74% weighted F1-score on biomedical domain, demonstrating effective transfer learning from general to specialized domains.<br/><img src='/images/NER.png' width='600'>"
+title: "MedClip-Mini: A Compact CLIP-style Model for Medical Image-Text Pairs"
+excerpt: "Lightweight CLIP-style model (~50M parameters) for medical imaging achieving strong zero-shot performance (Recall@1: 0.28, Recall@10: 0.55) on ROCO dataset with efficient FAISS-based retrieval and cross-platform deployment.<br/><img src='/images/clip_image.png' width='600'>"
 collection: portfolio
 ---
 
-A production-ready Named Entity Recognition system using bidirectional LSTM architecture, demonstrating strong performance across general and domain-specific tasks.
+A compact CLIP-style model optimized for medical imaging, achieving strong zero-shot performance with minimal computational overhead.
 
-**Innovation Highlights:** (1) Bi-LSTM architecture with spatial dropout and time-distributed output achieving 98% accuracy on standard NER, (2) Transfer learning pipeline fine-tuning on BC5CDR biomedical dataset achieving entity F1: 54.81% and weighted F1: 70.74%, (3) Domain adaptation techniques for robust transfer from general to biomedical text.
+**Innovation Highlights:** (1) Dual-encoder architecture (ResNet-18 + DistilBERT) with InfoNCE contrastive loss, (2) Model compression to ~50M parameters (vs 400M+ in standard CLIP) achieving Recall@1: 0.28 and Recall@10: 0.55 on ROCO, (3) FAISS-based indexing for efficient similarity search with sub-second query times.
 
-**Technical Excellence:** Data preprocessing pipelines, custom evaluation metrics (F1, precision, recall), and training infrastructure with early stopping and loss visualization.
+**Technical Excellence:** End-to-end pipeline with contrastive learning on ROCO dataset, comprehensive evaluation metrics, and production-ready inference with batch processing.
 
-**Engineering Best Practices:** Built with TensorFlow 2.0+, Keras, and production-ready code with configurable hyperparameters. Demonstrates expertise in sequence modeling, transfer learning, domain adaptation, and NLP pipelines.
+**Engineering Best Practices:** Cross-platform deployment (MPS, CUDA, CPU) and modular architecture. Demonstrates expertise in contrastive learning, vision-language models, model compression, and medical AI.
 
-**[GitHub](https://github.com/sudo-YashBhardwaj/Named-Entity-Recognition)**
-
+**[GitHub](https://github.com/sudo-YashBhardwaj/MedClip-Mini)**
