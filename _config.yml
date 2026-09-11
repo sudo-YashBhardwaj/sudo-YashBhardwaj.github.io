@@ -193,6 +193,15 @@ exclude:
   - package.json*
   - Rakefile
   - README
+  - README.md
+  - CONTRIBUTING.md
+  - docker-compose.yaml
+  - Gemfile.lock
+  - markdown_generator
+  - scripts
+  - talkmap
+  - talkmap.py
+  - "*.ipynb"
   - tmp
   - vendor
 keep_files:
