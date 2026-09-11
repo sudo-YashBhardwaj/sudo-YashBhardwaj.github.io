@@ -1,18 +1,39 @@
 ---
-title: "Diffusion Distillation for Fast Text-to-Image Generation"
-excerpt: "An inspired replication of Flash Diffusion paper: teacher-student distillation accelerating Stable Diffusion v1.5 to 2-8 step generation with LoRA (~4M parameters), achieving up to 18× speedup and sub-second inference (<0.3s/image).<br/><img src='/images/diffusion_distillation.png' width='600'>"
+title: "Few-step text-to-image via LoRA diffusion distillation"
 collection: portfolio
+permalink: /projects/diffusion-distillation/
+redirect_from:
+  - /portfolio/portfolio-1/
+group: generative
+order: 3
+year_label: "2025 · reimplementation of Flash Diffusion (AAAI 2025)"
+tldr: "Distilled Stable Diffusion 1.5 into a ~4M-parameter LoRA student that matches a multi-step DDIM teacher: 2 / 4 / 8-step sampling at 0.12 / 0.16 / 0.25 s per image vs. 2.17 s for the baseline (up to 18× faster), trained on one 20 GB GPU."
+excerpt: "LoRA distillation of Stable Diffusion 1.5 for 2-8 step sampling, up to 18x faster."
+links:
+  - label: "Code"
+    url: "https://github.com/sudo-YashBhardwaj/diffusion-distillation"
+  - label: "Flash Diffusion paper"
+    url: "https://arxiv.org/abs/2406.02347"
 ---
 
-An inspired implementation of Flash Diffusion (AAAI 2025), a teacher-student distillation framework accelerating Stable Diffusion v1.5 for fast text-to-image generation, achieving up to 18× speedup with minimal quality degradation.
+<figure>
+  <img src="/images/diffusion_distillation.png" alt="Teacher-student distillation schematic: the student matches the classifier-free-guided teacher prediction with an MSE loss" loading="lazy">
+  <figcaption>Method schematic, following Flash Diffusion (Chadebec et al., AAAI 2025).</figcaption>
+</figure>
 
-**Innovation Highlights:** (1) LoRA-based distillation (~4M parameters) where a frozen SD1.5 teacher performs multi-step DDIM denoising while a LoRA student learns to match the K-step target in a single forward pass, (2) Sub-second inference: 0.12s/image (2 steps, 18.1×), 0.16s/image (4 steps, 13.6×), 0.25s/image (8 steps, 8.7×) vs 2.17s baseline, (3) LCM-style timestep sampling to reduce train/inference mismatch.
+**Problem.** Stable Diffusion needs tens of denoising steps per image, which dominates latency. Flash Diffusion showed that a small LoRA student can be distilled to sample in a handful of steps.
 
-**Technical Excellence:** Training pipeline on COCO (118K pairs) with checkpoint/resume, benchmarking harness with CUDA-synchronized timing, CLIP alignment metrics, and comparison grids.
+**Approach.** A frozen SD 1.5 teacher runs multi-step DDIM denoising with classifier-free guidance; a LoRA student (~4M parameters) learns to match the K-step target in a single forward pass. LCM-style timestep sampling reduces the train/inference mismatch. Trained on COCO (118K image–caption pairs) on a single RTX 4000 Ada (20 GB) in FP16 with Accelerate.
 
-**Engineering Best Practices:** Single-GPU training (RTX 4000 Ada 20GB), FP16 mixed precision with Accelerate, reproducible evaluation (20 prompts × 10 images), and CSV/JSON export. Demonstrates expertise in knowledge distillation, diffusion models, LoRA fine-tuning, and inference optimization.
+**Result.**
 
-**[GitHub](https://github.com/sudo-YashBhardwaj/diffusion-distillation)**
+| Steps | Time / image | Speed-up |
+|------:|-------------:|---------:|
+| 2 | 0.12 s | 18.1× |
+| 4 | 0.16 s | 13.6× |
+| 8 | 0.25 s | 8.7× |
+| baseline | 2.17 s | 1× |
 
+Timings are CUDA-synchronized; evaluation uses 20 prompts × 10 images with CLIP text–image alignment and side-by-side grids.
 
-**Replicating:** [Flash Diffusion (AAAI 2025)](https://arxiv.org/abs/2406.02347)
+{% include todo.html text="Add the CLIP-score (or FID) numbers vs. the 2.17 s baseline, and replace the schematic with a sample grid (baseline vs 2/4/8 steps) — quality at speed is the actual claim." %}

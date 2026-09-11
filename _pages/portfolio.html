@@ -1,14 +1,23 @@
 ---
 layout: archive
-title: "Portfolio"
+title: "Projects"
 permalink: /portfolio/
 author_profile: true
+description: "Projects by Yash Bhardwaj: vision-language models for robot guidance, differentiable MPC, diffusion distillation, and multimodal models."
 ---
 
 {% include base_path %}
 
+{% comment %} Grouping and order come from `group` and `order` in each _portfolio/*.md front matter. {% endcomment %}
+{% assign projects = site.portfolio | sort: "order" %}
 
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
+<h2 class="work-group">Robotics, control and embodied AI</h2>
+{% for p in projects %}{% if p.group == "embodied" %}{% include work-row.html item=p %}{% endif %}{% endfor %}
 
+<h2 class="work-group">Generative and multimodal models</h2>
+{% for p in projects %}{% if p.group == "generative" %}{% include work-row.html item=p %}{% endif %}{% endfor %}
+
+<h2 class="work-group">Earlier coursework</h2>
+<ul class="work-list">
+{% for p in projects %}{% if p.group == "earlier" %}{% include work-row.html item=p compact=true %}{% endif %}{% endfor %}
+</ul>

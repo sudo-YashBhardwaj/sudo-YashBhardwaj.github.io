@@ -1,15 +1,23 @@
 ---
-title: "MedClip-Mini: A Compact CLIP-style Model for Medical Image-Text Pairs"
-excerpt: "Lightweight CLIP-style model (~50M parameters) for medical imaging achieving strong zero-shot performance (Recall@1: 0.28, Recall@10: 0.55) on ROCO dataset with efficient FAISS-based retrieval and cross-platform deployment.<br/><img src='/images/clip_image.png' width='600'>"
+title: "MedCLIP-Mini: a compact CLIP for radiology image–text retrieval"
 collection: portfolio
+permalink: /projects/medclip-mini/
+redirect_from:
+  - /portfolio/portfolio-4/
+group: generative
+order: 5
+year_label: "2025 · independent project"
+tldr: "CLIP-style dual encoder (ResNet-18 + DistilBERT, ~50M parameters, ~8× smaller than CLIP ViT-L) trained with InfoNCE on ROCO image–caption pairs; R@1 0.28 / R@10 0.55 image–text retrieval with a FAISS index."
+excerpt: "Compact CLIP-style model for medical image-text retrieval on ROCO; R@1 0.28, R@10 0.55."
+links:
+  - label: "Code"
+    url: "https://github.com/sudo-YashBhardwaj/MedClip-Mini"
 ---
 
-A compact CLIP-style model optimized for medical imaging, achieving strong zero-shot performance with minimal computational overhead.
+**Problem.** Medical image–text retrieval is useful for search and report drafting, but full-size CLIP models are expensive to train and deploy, and general-domain CLIP transfers poorly to radiology.
 
-**Innovation Highlights:** (1) Dual-encoder architecture (ResNet-18 + DistilBERT) with InfoNCE contrastive loss, (2) Model compression to ~50M parameters (vs 400M+ in standard CLIP) achieving Recall@1: 0.28 and Recall@10: 0.55 on ROCO, (3) FAISS-based indexing for efficient similarity search with sub-second query times.
+**Approach.** A dual encoder — ResNet-18 for images, DistilBERT for captions — trained from pretrained backbones with a symmetric InfoNCE contrastive loss on ROCO radiology image–caption pairs. Embeddings are indexed with FAISS for sub-second search; runs on CUDA, Apple MPS or CPU.
 
-**Technical Excellence:** End-to-end pipeline with contrastive learning on ROCO dataset, comprehensive evaluation metrics, and production-ready inference with batch processing.
+**Result.** Recall@1 = 0.28 and Recall@10 = 0.55 on image–text retrieval with ~50M parameters.
 
-**Engineering Best Practices:** Cross-platform deployment (MPS, CUDA, CPU) and modular architecture. Demonstrates expertise in contrastive learning, vision-language models, model compression, and medical AI.
-
-**[GitHub](https://github.com/sudo-YashBhardwaj/MedClip-Mini)**
+{% include todo.html text="State the retrieval pool size (R@1 depends heavily on it) and a baseline (e.g. zero-shot OpenAI CLIP on the same split)." %}
