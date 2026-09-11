@@ -1,0 +1,322 @@
+/* ==========================================================================
+   RESEARCH HOMEPAGE AND WORK LISTS
+   Styles for _pages/about.md and the shared _includes/work-row.html
+   (also used by /publications/ and /portfolio/). Class names are namespaced;
+   delete this file and its import in assets/css/main.scss to revert.
+   ========================================================================== */
+
+:root {
+  --work-accent: #a8392c;          // "Oral" and similar awards; AA on white
+}
+html[data-theme="dark"] {
+  --work-accent: #ff9a8a;
+}
+
+/* Homepage intro
+   ========================================================================== */
+
+.page__content .home-lead {
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: var(--global-text-color);
+  margin-bottom: 0.9em;
+}
+
+.page__content .home-path {
+  font-size: $type-size-6;
+  line-height: 1.6;
+  color: var(--global-text-color-light);
+  margin-bottom: 1.1em;
+
+  .sep {
+    padding: 0 0.35em;
+  }
+
+  .now {
+    color: var(--global-text-color);
+    font-weight: 600;
+  }
+}
+
+.page__content .home-links {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35em 1.4em;
+
+  li {
+    margin: 0;
+    font-size: 0.95em;
+  }
+
+  a {
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 1px;
+  }
+}
+
+/* Dated lists: news and experience
+   ========================================================================== */
+
+.page__content .dated-list {
+  list-style: none;
+  margin: 0 0 1.75em;
+  padding: 0;
+
+  li {
+    display: grid;
+    grid-template-columns: 5.5em minmax(0, 1fr);
+    column-gap: 1em;
+    margin: 0 0 0.5em;
+    line-height: 1.5;
+  }
+
+  &--wide li {
+    grid-template-columns: 6.25em minmax(0, 1fr);
+  }
+
+  .when {
+    color: var(--global-text-color-light);
+    font-size: 0.9em;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    padding-top: 0.1em;
+  }
+
+  @media (max-width: 30em) {
+    li,
+    &--wide li {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .when {
+      padding-top: 0;
+    }
+  }
+}
+
+.page__content .interests {
+  padding-left: 1.1em;
+  margin-bottom: 1.75em;
+
+  li {
+    margin-bottom: 0.45em;
+    line-height: 1.55;
+  }
+}
+
+.page__content .work-group,
+.archive .work-group {
+  margin: 1.75em 0 0.9em;
+  font-size: $type-size-6;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--global-text-color-light);
+}
+
+.more-link {
+  font-size: $type-size-6;
+}
+
+.home-footnote {
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+/* Work rows: figure + problem -> contribution -> result
+   ========================================================================== */
+
+.work-row {
+  display: grid;
+  grid-template-columns: minmax(0, 13em) minmax(0, 1fr);
+  gap: 1.35em;
+  margin: 0 0 2em;
+
+  &--no-media {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  @media (max-width: 35em) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.75em;
+  }
+
+  p {
+    margin: 0 0 0.35em;
+  }
+}
+
+.work-row__media {
+  display: block;
+  align-self: start;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--global-border-color);
+  border-radius: $border-radius;
+  background: #fff;             // figures are drawn on white; keep them legible in dark mode
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &--contain img {
+    object-fit: contain;
+    padding: 4px;
+  }
+
+  @media (max-width: 35em) {
+    max-width: 24em;
+  }
+}
+
+.work-row__title,
+.page__content .work-row__title {
+  margin: 0 0 0.3em;
+  padding: 0;
+  border: 0;
+  font-size: 1.05em;
+  line-height: 1.35;
+
+  a {
+    color: var(--global-text-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--global-link-color-hover);
+      text-decoration: underline;
+    }
+  }
+}
+
+.work-row__authors {
+  font-size: $type-size-6;
+  line-height: 1.45;
+  color: var(--global-text-color-light);
+
+  strong {
+    color: var(--global-text-color);
+  }
+}
+
+.work-row__venue {
+  font-size: $type-size-6;
+  font-style: italic;
+  color: var(--global-text-color);
+}
+
+.work-row__award {
+  font-style: normal;
+  color: var(--work-accent);
+}
+
+.work-row__tldr {
+  font-size: 0.95em;
+  line-height: 1.55;
+}
+
+.work-row__links,
+.page__links {
+  font-size: $type-size-6;
+
+  a {
+    text-decoration: none;
+  }
+
+  a + a::before {
+    content: "·";
+    display: inline-block;
+    padding: 0 0.5em;
+    color: var(--global-text-color-light);
+  }
+}
+
+/* Compact list (no figure) */
+
+.work-list {
+  list-style: none;
+  margin: 0 0 2em;
+  padding: 0;
+}
+
+.work-list__item {
+  margin: 0 0 0.85em;
+  line-height: 1.5;
+}
+
+.work-list__title {
+  font-weight: 600;
+  color: var(--global-text-color);
+
+  .page__content &,
+  .archive & {
+    text-decoration: none;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.work-list__meta {
+  font-size: $type-size-6;
+  color: var(--global-text-color-light);
+}
+
+.work-list__tldr {
+  display: block;
+  font-size: 0.92em;
+}
+
+/* Detail pages (publications / projects)
+   ========================================================================== */
+
+.page__authors {
+  font-size: $type-size-6;
+  line-height: 1.5;
+  margin-bottom: 0.25em;
+
+  strong {
+    color: var(--global-text-color);
+  }
+}
+
+.page__venue {
+  font-size: $type-size-6;
+  margin-bottom: 0.4em;
+}
+
+.page__content figure {
+  margin: 0 0 1.75em;
+
+  img {
+    border: 1px solid var(--global-border-color);
+    border-radius: $border-radius;
+    background: #fff;
+  }
+
+  figcaption {
+    margin-top: 0.4em;
+    font-size: $type-size-6;
+    color: var(--global-text-color-light);
+  }
+}
+
+/* Author-facing TODO markers: only emitted in `jekyll serve` (see _includes/todo.html) */
+
+.todo-note {
+  display: inline-block;
+  margin: 0.2em 0;
+  padding: 0.1em 0.45em;
+  border-radius: 3px;
+  background: #fff3cd;
+  color: #664d03;
+  font-size: 0.8em;
+  line-height: 1.4;
+}

@@ -3,34 +3,18 @@ layout: archive
 title: "Publications"
 permalink: /publications/
 author_profile: true
+description: "Publications by Yash Bhardwaj on multimodal video understanding: VideoConviction (KDD 2025, oral) and FinCap (ICCV 2025 workshop)."
 ---
-
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
+<p class="home-footnote">Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>. * denotes equal contribution.</p>
+
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% assign years = pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for year in years %}
+  <h2 class="work-group">{{ year.name }}</h2>
+  {% for p in year.items %}
+    {% include work-row.html item=p %}
   {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
-
-
-
+{% endfor %}

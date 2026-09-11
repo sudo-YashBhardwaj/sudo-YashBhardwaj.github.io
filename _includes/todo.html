@@ -1,0 +1,6 @@
+{% comment %}
+  Author-facing reminder. Renders only in local development (`jekyll serve`),
+  never in the production build GitHub Pages runs (JEKYLL_ENV=production).
+  Usage: {% include todo.html text="Add a one-line summary of the Inria project." %}
+{% endcomment %}
+{% if jekyll.environment == "development" %}<span class="todo-note" role="note">TODO: {{ include.text }}</span>{% endif %}
