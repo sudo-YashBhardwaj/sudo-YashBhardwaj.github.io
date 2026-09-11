@@ -1,6 +1,7 @@
 ---
 permalink: /
 title: "Yash Bhardwaj"
+hide_title: true # the name is already in the masthead and sidebar; keep the <h1> for screen readers and search only
 seo_title: "Yash Bhardwaj · 3D perception, VLAs and embodied AI"
 description: "Yash Bhardwaj is an ML researcher (Inria Willow, École Polytechnique) working on 3D perception, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
 author_profile: true

@@ -38,6 +38,8 @@ html[data-theme="dark"] {
   }
 }
 
+// Only for narrow screens, where the sidebar hides its links behind "Follow".
+// From $large up the sidebar lists the same links, so this row would duplicate them.
 .page__content .home-links {
   list-style: none;
   margin: 0 0 2em;
@@ -45,6 +47,10 @@ html[data-theme="dark"] {
   display: flex;
   flex-wrap: wrap;
   gap: 0.35em 1.4em;
+
+  @include breakpoint($large) {
+    display: none;
+  }
 
   li {
     margin: 0;
