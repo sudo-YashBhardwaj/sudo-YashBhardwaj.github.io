@@ -9,10 +9,10 @@
 # Basic Site Settings
 locale                   : "en-US"
 site_theme               : "default"
-title                    : "Yash's Homepage"
-title_separator          : "-"
+title                    : "Yash Bhardwaj"
+title_separator          : "·"
 name                     : &name "Yash Bhardwaj"
-description              : &description "personal description"
+description              : &description "Yash Bhardwaj — ML researcher (École Polytechnique, Inria Willow). Multimodal and 3D perception for embodied AI: vision-language-action models, world models, post-training. KDD'25 Oral, ICCV'25."
 url                      : https://sudo-yashbhardwaj.github.io # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "sudo-YashBhardwaj/sudo-YashBhardwaj.github.io"
@@ -22,14 +22,21 @@ repository               : "sudo-YashBhardwaj/sudo-YashBhardwaj.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "display_image_square.jpg"
+  avatar           : "profile-400.jpg"
   name             : "Yash Bhardwaj"
-  pronouns         : # example: "she/her"  
-  bio              : "AI Researcher"
+  pronouns         : # example: "she/her"
+  bio              : "Research intern, Inria Willow · MSc, École Polytechnique"
   location         : "Paris, France"
-  employer         : "Ecole Polytechnique (IP Paris)"
+  employer         : # shown in bio instead, to keep the sidebar short
   uri              : # URL
-  email            : "yash.bhardwaj@zimbra.polytechnique.fr" 
+  email            : "yash.bhardwaj@polytechnique.edu"
+  cv               : "/files/Yash_Bhardwaj_VIS.pdf" # linked from the sidebar and nav; keep this path stable
+
+  # Used only for search-engine structured data (JSON-LD) on the homepage
+  job_title        : "Machine Learning Researcher"
+  affiliations     : ["Inria Paris", "École Polytechnique"]
+  alumni_of        : ["Birla Institute of Technology and Science, Pilani", "Georgia Institute of Technology"]
+  knows_about      : ["Vision-language-action models", "3D perception", "Robot learning", "Multimodal learning", "Diffusion models"]
 
   # Academic websites
   academia         : # URL
@@ -139,8 +146,8 @@ facebook:
   username               :
   app_id                 :
   publisher              :
-og_image                 :  # Social media default site image
-og_description           :  # Social media default site image description
+og_image                 : "profile-400.jpg" # Social media default site image (in /images/)
+og_image_alt             : "Portrait of Yash Bhardwaj"
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
