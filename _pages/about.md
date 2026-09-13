@@ -1,7 +1,6 @@
 ---
 permalink: /
-title: "Yash Bhardwaj"
-hide_title: true # the name is already in the masthead and sidebar; keep the <h1> for screen readers and search only
+title: "👋 Hello there! I'm Yash"
 seo_title: "Yash Bhardwaj · 3D perception, VLAs and embodied AI"
 description: "Yash Bhardwaj is an ML researcher (Inria Willow, École Polytechnique) working on 3D perception, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
 author_profile: true
@@ -10,76 +9,52 @@ redirect_from:
   - /about.html
 ---
 
-{% include base_path %}
-{% assign projects = site.portfolio | sort: "order" %}
+![Tiny-VLA output: a wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid](/images/work/tiny-vla.jpg){: .align-right width="300px"}
 
-<p class="home-lead">I study how machines can perceive the 3D world, ground it in language, and act in it. I am a research intern in the <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris and an MSc student in AI at École Polytechnique.</p>
+👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**
 
-I came to research through engineering: three and a half years as a software engineer at Urban Company building production data and ML systems, then multimodal research with Georgia Tech on what multimodal LLMs actually understand in video ([KDD 2025, oral]({{ base_path }}/publication/videoconviction/); [ICCV 2025 workshop]({{ base_path }}/publication/fincap/)). I now work on 3D perception and robot learning.
-{% include todo.html text="One sentence on the Inria project (what problem, what setting — e.g. 3D representations for VLA policies), as specific as you are allowed to be." %}
+🤖 I'm currently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**. {% include todo.html text="One sentence on the Inria project (what problem, what setting), as specific as you are allowed to be." %}
 
-<p class="home-path" aria-label="Research trajectory">Software systems<span class="sep" aria-hidden="true">→</span>multimodal video understanding<span class="sep" aria-hidden="true">→</span>3D perception &amp; robotics<span class="sep" aria-hidden="true">→</span><span class="now">VLAs, world models, post-training</span></p>
+🔬 My research interests are **3D perception**, **vision-language-action models (VLAs)**, **world models**, and **RL/post-training** for embodied AI.
 
-<ul class="home-links">
-  <li><a href="{{ site.author.cv | prepend: base_path }}">CV (PDF)</a></li>
-  <li><a href="mailto:{{ site.author.email }}">Email</a></li>
-  <li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
-  <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
-  <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
-</ul>
+📚 I previously worked with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on multimodal video understanding, and spent three and a half years building production data and ML systems as a software engineer at **Urban Company**.
 
-## News
+> I love end-to-end work: data → modeling → eval → lightweight demos.
 
-<ul class="dated-list">
-  <li><span class="when">2026</span><span>Joined the <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris as a research intern. {% include todo.html text="Add the month, and change this line when the internship ends." %}</span></li>
-  <li><span class="when">Oct 2025</span><span><a href="{{ base_path }}/publication/fincap/">FinCap</a> presented at the ICCV 2025 workshop on Short Video Understanding.</span></li>
-  <li><span class="when">Sep 2025</span><span>Started the MSc&amp;T in Trustworthy and Responsible AI at École Polytechnique as a Charpak scholar (56 selected from 2,500+ applicants).</span></li>
-  <li><span class="when">Aug 2025</span><span><a href="{{ base_path }}/publication/videoconviction/">VideoConviction</a> presented as an oral at KDD 2025, Datasets and Benchmarks Track.</span></li>
-</ul>
+### What I'm focused on now
+- 🤖 **Vision-language-action models:** grounding language in what a robot sees, and turning it into actions a controller can use.
+- 🧊 **3D perception:** whether explicit geometry (depth, point clouds, 3D features) makes policies more sample-efficient and robust than 2D inputs alone.
+- 🌍 **World models & control:** learning dynamics that are useful for *planning*, not only for prediction.
+- ⚙️ **Post-training & efficiency:** RL and preference-based fine-tuning of VLMs/VLAs; LoRA, quantization, and training on a single GPU.
 
-## Current interests
+# Selected Highlights
 
-<ul class="interests">
-  <li><strong>3D-aware vision-language-action models.</strong> Whether explicit geometry (depth, point clouds, 3D features) makes VLA policies more sample-efficient and robust than 2D inputs alone.</li>
-  <li><strong>World models for control.</strong> Learning dynamics that are useful for planning, not only for prediction — the gap my <a href="{{ base_path }}/projects/differentiable-mpc/">differentiable-MPC study</a> makes concrete.</li>
-  <li><strong>Post-training embodied models.</strong> RL and preference-based fine-tuning of VLMs and VLAs beyond behaviour cloning.</li>
-  <li><strong>Visual representations.</strong> What self-supervised features (DINO-style) capture about geometry and affordances.</li>
-</ul>
+## Publications
+- **[VideoConviction (KDD 2025, Oral)](/publication/videoconviction/):**
+  The first expert-annotated **multimodal finance benchmark**, capturing *conviction* in stock market recommendations from YouTube finfluencers.
+  - 6,000+ annotations across 288 videos (43 hrs), 457 annotation hours.
+  - Benchmarks LLMs and MLLMs on ticker/action/conviction extraction.
+  - Betting *against* finfluencers beats the S&P 500 by 6.8%/yr, at higher risk (Sharpe 0.41 vs 0.65).
+  - Dataset + code on [GitHub](https://github.com/gtfintechlab/VideoConviction) / [Hugging Face](https://huggingface.co/datasets/gtfintechlab/VideoConviction).
 
-## Selected publications
-
-{% include todo.html text="When the Inria work is public (paper, preprint or project page), add it to _publications/ with featured: true — it will appear first here." %}
-{% assign featured_pubs = site.publications | where: "featured", true | sort: "order" %}
-{% for p in featured_pubs %}{% include work-row.html item=p %}{% endfor %}
-
-<p class="more-link"><a href="{{ base_path }}/publications/">All publications</a> · <a href="{{ site.author.googlescholar }}">Google Scholar</a></p>
+- **[FinCap (ICCV 2025 Workshop, Short Video Understanding)](/publication/fincap/):**
+  Topic-aligned captioning benchmark for financial short videos.
+  - All 7 transcript/audio/video combinations across 624 clips and 5 topics.
+  - **Video alone is strongest on 4 of 5 topics**; pairs like TV or AV often beat all three — more modalities can add noise.
+  - Reference-free evaluation (G-VEval) plus F1 on ticker–action pairs.
 
 ## Projects
+- **[Tiny-VLA](/projects/tiny-vla/):** fine-tuned **Qwen3-VL-2B** (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target — a bounding box, a spatial instruction and a discrete action token — on a single consumer GPU.
+- **[Differentiable MPC](/projects/differentiable-mpc/):** all 8 seeds reach imitation loss < 1e-3 and recover the identifiable ratios *g/l* and *1/(ml²)* to within 2%, while *g* alone lands anywhere from 7 to 17 — so parameter MSE penalizes a direction the data cannot observe.
+- **[Diffusion distillation](/projects/diffusion-distillation/):** a ~4M-parameter LoRA student matching a multi-step DDIM teacher — 2/4/8-step sampling at 0.12/0.16/0.25 s per image vs 2.17 s (up to **18× faster**).
 
-<p class="work-group">Robotics and control</p>
-{% for p in projects %}{% if p.group == "embodied" %}{% include work-row.html item=p %}{% endif %}{% endfor %}
+### Background
+- 🎓 **MSc&T Trustworthy and Responsible AI**: [École Polytechnique](https://www.polytechnique.edu/en) (current), Charpak scholar (56 selected from 2,500+ applicants)
+- 🎓 **B.E., Computer Science**: [BITS Pilani](https://www.bits-pilani.ac.in/), India
+- 🧪 **Research**: [Inria Paris](https://www.di.ens.fr/willow/) (Willow), [Georgia Tech](https://www.gatech.edu/) (multimodal video), [IIIT-Delhi](https://midas.iiitd.ac.in/bio) (author profiling, citation/keyphrase gen)
+- 💻 **Industry**: Urban Company — distributed product-catalog cache (27K products, 5 countries, −40% latency); demand-aware pricing (+4% revenue on $80M+ of transactions)
 
-<p class="work-group">Generative and multimodal models</p>
-<ul class="work-list">
-{% for p in projects %}{% if p.group == "generative" %}{% include work-row.html item=p compact=true %}{% endif %}{% endfor %}
-</ul>
-
-<p class="more-link"><a href="{{ base_path }}/portfolio/">All projects</a> · <a href="https://github.com/{{ site.author.github }}">GitHub</a></p>
-
-## Experience
-
-<ul class="dated-list dated-list--wide">
-  <li><span class="when">2026</span><span><strong>Research Intern</strong>, Willow team, Inria Paris</span></li>
-  <li><span class="when">2025 –</span><span><strong>MSc&amp;T, Trustworthy and Responsible AI</strong>, École Polytechnique · Charpak scholarship</span></li>
-  <li><span class="when">2024 – 25</span><span><strong>Research Intern</strong>, Financial Services Innovation Lab, Georgia Tech — multimodal video benchmarks (KDD 2025 oral, ICCV 2025 workshop)</span></li>
-  <li><span class="when">2021 – 25</span><span><strong>Software Developer II</strong>, Urban Company — distributed product-catalog cache (Kafka, Redis, MongoDB; 27K products, 5 countries, −40% latency); demand-aware pricing models (+4% revenue on $80M+ of transactions)</span></li>
-  <li><span class="when">2021</span><span><strong>Research Intern</strong>, IIIT-Delhi — author profiling with graph neural networks on S2ORC (600K papers, 160K authors)</span></li>
-  <li><span class="when">2017 – 21</span><span><strong>B.E. Computer Science</strong>, BITS Pilani</span></li>
-</ul>
-
-<p class="home-footnote">Also: world rank 4 and 6 in the CodeChef Long Challenge (Sep and Oct 2022, 10K+ participants).</p>
-
-## Contact
-
-Email is the best way to reach me: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>. I am always glad to talk about robot learning, VLAs and multimodal models.
-{% include todo.html text="Optional one line of availability, e.g. 'I am looking for research internships / PhD positions starting in 2027.' Leave it out if you would rather not signal it publicly." %}
+### Let's collaborate
+I'm especially interested in **VLAs**, **3D representations for robot learning**, **world models**, and **efficient training/inference**.
+If you're building in these areas, I'd love to chat — email is the best way to reach me: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+{% include todo.html text="Optional: add a line of availability, e.g. 'Looking for research internships / PhD positions starting 2027.'" %}
