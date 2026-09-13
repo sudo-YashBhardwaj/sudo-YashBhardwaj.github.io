@@ -19,6 +19,8 @@ redirect_from:
 
 📚 I previously worked with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on multimodal video understanding, and spent three and a half years building production data and ML systems as a software engineer at **Urban Company**.
 
+🔎 **Looking for research internships starting April 2027** in embodied AI, multimodal learning, diffusion / flow matching, and LLM pre- and post-training.
+
 > I love end-to-end work: data → modeling → eval → lightweight demos.
 
 ### What I'm focused on now
@@ -55,6 +57,5 @@ redirect_from:
 - 💻 **Industry**: Urban Company — distributed product-catalog cache (27K products, 5 countries, −40% latency); demand-aware pricing (+4% revenue on $80M+ of transactions)
 
 ### Let's collaborate
-I'm especially interested in **VLAs**, **3D representations for robot learning**, **world models**, and **efficient training/inference**.
-If you're building in these areas, I'd love to chat — email is the best way to reach me: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
-{% include todo.html text="Optional: add a line of availability, e.g. 'Looking for research internships / PhD positions starting 2027.'" %}
+I'm especially interested in **VLAs**, **3D representations for robot learning**, **world models**, **diffusion / flow matching**, and **LLM pre- and post-training**.
+If you're building in these areas — or have a research internship opening from April 2027 — I'd love to chat. Email is the best way to reach me: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
