@@ -29,9 +29,9 @@ redirect_from:
 - 🌍 **World models & control:** learning dynamics that are useful for *planning*, not only for prediction.
 - ⚙️ **Post-training & efficiency:** RL and preference-based fine-tuning of VLMs/VLAs; LoRA, quantization, and training on a single GPU.
 
-# Selected Highlights
+## Selected Highlights
 
-## Publications
+### Publications
 - **[VideoConviction (KDD 2025, Oral)](/publication/videoconviction/):**
   The first expert-annotated **multimodal finance benchmark**, capturing *conviction* in stock market recommendations from YouTube finfluencers.
   - 6,000+ annotations across 288 videos (43 hrs), 457 annotation hours.
@@ -45,7 +45,7 @@ redirect_from:
   - **Video alone is strongest on 4 of 5 topics**; pairs like TV or AV often beat all three, so more modalities can add noise.
   - Reference-free evaluation (G-VEval) plus F1 on ticker–action pairs.
 
-## Projects
+### Projects
 - **[Tiny-VLA](/projects/tiny-vla/):** fine-tuned **Qwen3-VL-2B** (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target (a bounding box, a spatial instruction and a discrete action token), on a single consumer GPU.
 - **[Differentiable MPC](/projects/differentiable-mpc/):** all 8 seeds reach imitation loss < 1e-3 and recover the identifiable ratios *g/l* and *1/(ml²)* to within 2%, while *g* alone lands anywhere from 7 to 17, so parameter MSE penalizes a direction the data cannot observe.
 - **[Diffusion distillation](/projects/diffusion-distillation/):** a ~4M-parameter LoRA student matching a multi-step DDIM teacher: 2/4/8-step sampling at 0.12/0.16/0.25 s per image vs 2.17 s (up to **18× faster**).
@@ -54,7 +54,7 @@ redirect_from:
 - 🎓 **MSc&T Trustworthy and Responsible AI**: [École Polytechnique](https://www.polytechnique.edu/en) (current), Charpak scholar (56 selected from 2,500+ applicants)
 - 🎓 **B.E., Computer Science**: [BITS Pilani](https://www.bits-pilani.ac.in/), India
 - 🧪 **Research**: [Inria Paris](https://www.di.ens.fr/willow/) (Willow), [Georgia Tech](https://www.gatech.edu/) (multimodal video), [IIIT-Delhi](https://midas.iiitd.ac.in/bio) (author profiling, citation/keyphrase gen)
-- 💻 **Industry**: Urban Company: distributed product-catalog cache (27K products, 5 countries, −40% latency); demand-aware pricing (+4% revenue on $80M+ of transactions)
+- 💻 **Industry**: Software Developer II at Urban Company (2021–25); distributed product-catalog cache (27K products, 5 countries, −40% latency); demand-aware pricing (+4% revenue on $80M+ of transactions)
 
 ### Let's collaborate
 I'm especially interested in **VLAs**, **3D representations for robot learning**, **world models**, **diffusion / flow matching**, and **LLM pre- and post-training**.

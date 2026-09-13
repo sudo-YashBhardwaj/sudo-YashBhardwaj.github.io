@@ -14,7 +14,9 @@ description: "Publications by Yash Bhardwaj on multimodal video understanding: V
 {% assign years = pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
 {% for year in years %}
   <h2 class="work-group">{{ year.name }}</h2>
-  {% for p in year.items %}
+  {% comment %} Years newest first; within a year, strongest first via `order` front matter. {% endcomment %}
+  {% assign items = year.items | sort: "order" %}
+  {% for p in items %}
     {% include work-row.html item=p %}
   {% endfor %}
 {% endfor %}

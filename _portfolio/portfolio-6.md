@@ -6,7 +6,6 @@ redirect_from:
   - /portfolio/portfolio-6/
 group: earlier
 order: 21
-year_label: "Coursework"
 tldr: "Audited a loan-approval classifier for gender bias with IBM AIF360 (disparate impact, statistical parity, equalized odds) and compared pre-processing mitigations (reweighing, disparate-impact remover)."
 excerpt: "Gender-bias audit and mitigation of a loan-approval classifier with IBM AIF360."
 links:

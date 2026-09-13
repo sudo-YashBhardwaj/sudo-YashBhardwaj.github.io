@@ -6,7 +6,6 @@ redirect_from:
   - /portfolio/portfolio-5/
 group: earlier
 order: 20
-year_label: "Coursework"
 tldr: "Bi-LSTM tagger trained on general-domain NER and transferred to biomedical text (BC5CDR): entity-level F1 54.8%."
 excerpt: "Bi-LSTM NER transferred from general to biomedical text (BC5CDR)."
 links:
