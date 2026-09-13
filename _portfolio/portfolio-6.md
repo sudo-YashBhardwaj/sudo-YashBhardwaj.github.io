@@ -16,6 +16,6 @@ links:
 
 **Problem.** A classifier can be accurate overall while treating protected groups unequally; the right fairness metric and mitigation depend on the setting.
 
-**Approach.** Measured gender bias in a loan-approval model with IBM AIF360 — disparate impact, statistical parity difference and equalized odds — then applied pre-processing mitigations (reweighing, disparate-impact remover) and compared fairness against accuracy.
+**Approach.** Measured gender bias in a loan-approval model with IBM AIF360 (disparate impact, statistical parity difference and equalized odds), then applied pre-processing mitigations (reweighing, disparate-impact remover) and compared fairness against accuracy.
 
 {% include todo.html text="Add the before/after disparate-impact and accuracy numbers, or leave this project off the site." %}

@@ -36,4 +36,4 @@ links:
 
 Timings are CUDA-synchronized; evaluation uses 20 prompts × 10 images with CLIP text–image alignment and side-by-side grids.
 
-{% include todo.html text="Add the CLIP-score (or FID) numbers vs. the 2.17 s baseline, and replace the schematic with a sample grid (baseline vs 2/4/8 steps) — quality at speed is the actual claim." %}
+{% include todo.html text="Add the CLIP-score (or FID) numbers vs. the 2.17 s baseline, and replace the schematic with a sample grid (baseline vs 2/4/8 steps): quality at speed is the actual claim." %}

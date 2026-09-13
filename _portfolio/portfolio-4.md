@@ -16,7 +16,7 @@ links:
 
 **Problem.** Medical image–text retrieval is useful for search and report drafting, but full-size CLIP models are expensive to train and deploy, and general-domain CLIP transfers poorly to radiology.
 
-**Approach.** A dual encoder — ResNet-18 for images, DistilBERT for captions — trained from pretrained backbones with a symmetric InfoNCE contrastive loss on ROCO radiology image–caption pairs. Embeddings are indexed with FAISS for sub-second search; runs on CUDA, Apple MPS or CPU.
+**Approach.** A dual encoder (ResNet-18 for images, DistilBERT for captions) trained from pretrained backbones with a symmetric InfoNCE contrastive loss on ROCO radiology image–caption pairs. Embeddings are indexed with FAISS for sub-second search; runs on CUDA, Apple MPS or CPU.
 
 **Result.** Recall@1 = 0.28 and Recall@10 = 0.55 on image–text retrieval with ~50M parameters.
 

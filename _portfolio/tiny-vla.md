@@ -7,7 +7,7 @@ order: 1
 year_label: "2026 · independent project"
 teaser: "work/tiny-vla.jpg"
 teaser_alt: "Wheel-loader camera frame with the predicted target pile boxed and the model's instruction overlaid"
-tldr: "Fine-tuned Qwen3-VL-2B (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target — a bounding box, a spatial instruction and a discrete action token — on a single consumer GPU."
+tldr: "Fine-tuned Qwen3-VL-2B (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target (a bounding box, a spatial instruction and a discrete action token), on a single consumer GPU."
 excerpt: "Qwen3-VL-2B fine-tuned with LoRA on auto-labeled wheel-loader frames to output a dig-target box, a spatial instruction and an action token."
 links:
   - label: "Code"
@@ -29,4 +29,4 @@ links:
 
 {% include todo.html text="Add a quantitative result on held-out frames (e.g. box IoU / grounding accuracy vs. zero-shot Qwen3-VL-2B and vs. Florence-2 itself). One number here is worth more than the whole section." %}
 
-**Limitations and next steps.** Single-frame reasoning with no temporal context or depth; labels inherit Florence-2's errors; data has geographic and weather bias (no snow). Natural extensions: multi-frame input, depth or LiDAR, and closing the loop with a controller — i.e. turning guidance into actions.
+**Limitations and next steps.** Single-frame reasoning with no temporal context or depth; labels inherit Florence-2's errors; data has geographic and weather bias (no snow). Natural extensions: multi-frame input, depth or LiDAR, and closing the loop with a controller, i.e. turning guidance into actions.

@@ -16,6 +16,6 @@ links:
 
 **Problem.** Emotion is expressed across face, voice and words, and each channel fails in different conditions (occlusion, noise, sarcasm). A live system has to fuse them under a latency budget.
 
-**Approach.** Three concurrent pipelines — video (MTCNN detection + DeepFace ensemble), audio (Whisper transcription + RoBERTa), and text (RoBERTa) — feed a late-fusion module with confidence scoring and a priority order (text > video > audio). Queue-based buffering and timestamp alignment keep the streams synchronized; results are tracked over time and rendered with OpenCV.
+**Approach.** Three concurrent pipelines, for video (MTCNN detection + DeepFace ensemble), audio (Whisper transcription + RoBERTa) and text (RoBERTa), feed a late-fusion module with confidence scoring and a priority order (text > video > audio). Queue-based buffering and timestamp alignment keep the streams synchronized; results are tracked over time and rendered with OpenCV.
 
 **Result.** ~100–300 ms latency per frame (~2–3 fps end-to-end) with CUDA-accelerated inference and fallbacks when a modality drops out.

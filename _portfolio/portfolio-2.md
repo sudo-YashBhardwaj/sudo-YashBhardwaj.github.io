@@ -17,9 +17,9 @@ links:
 **Problem.** Text prompts control *what* an image shows far better than *how it feels*. Can a diffusion model be steered toward a target emotion cheaply, and which conditioning route works best?
 
 **Approach.** Three methods on Stable Diffusion 1.5, trained on EmoSet-118K (with RAF-DB for faces):
-1. *LoRA with learned emotion tokens* — a ~25 MB adapter (vs. the 4 GB base model), 0.4% trainable parameters.
-2. *Classifier guidance* — a ~2M-parameter noise-aware CNN on latents supplies gradients at sampling time, with no UNet fine-tuning.
-3. *Multimodal conditioning* — BLIP captions combined with EmotionCLIP embeddings.
+1. *LoRA with learned emotion tokens*: a ~25 MB adapter (vs. the 4 GB base model), 0.4% trainable parameters.
+2. *Classifier guidance*: a ~2M-parameter noise-aware CNN on latents supplies gradients at sampling time, with no UNet fine-tuning.
+3. *Multimodal conditioning*: BLIP captions combined with EmotionCLIP embeddings.
 
 **Result.** LoRA training is 15× faster and uses 80% less memory than full fine-tuning. Generations are evaluated with EmotionCLIP and ViT emotion classifiers (confusion matrices, per-emotion accuracy).
 

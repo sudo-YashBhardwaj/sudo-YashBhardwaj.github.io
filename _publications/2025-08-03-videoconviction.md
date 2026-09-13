@@ -35,14 +35,14 @@ citation: 'M. Galarnyk*, V. Kejriwal*, A. Shah*, Y. Bhardwaj, N. W. Meyer, A. Kr
   <figcaption>Back-test of a $100 investment: following finfluencers, betting against them, and holding the S&P 500.</figcaption>
 </figure>
 
-**Problem.** Financial influencers on YouTube move retail money, and what makes a recommendation persuasive is often non-verbal — tone, delivery, facial expression. Text-only financial NLP cannot see any of that, and there was no benchmark for whether multimodal models can.
+**Problem.** Financial influencers on YouTube move retail money, and what makes a recommendation persuasive is often non-verbal: tone, delivery, facial expression. Text-only financial NLP cannot see any of that, and there was no benchmark for whether multimodal models can.
 
 **Contribution.** An expert-annotated benchmark of 288 finfluencer videos (43 hours) with 6,000+ annotations produced through 457 hours of expert effort, covering the stock ticker, the recommended action, and the speaker's *conviction*. We evaluate MLLMs and text-only LLMs on full videos and on segmented clips.
 
 **Results.**
 - Multimodal input improves ticker extraction, but both MLLMs and LLMs struggle to separate investment actions and conviction, often mistaking general commentary for a definitive recommendation.
 - High-conviction recommendations outperform low-conviction ones, but still underperform the S&P 500.
-- An inverse strategy — betting against finfluencers — beats the S&P 500 by 6.8% in annual returns, at higher risk (Sharpe 0.41 vs 0.65).
+- An inverse strategy (betting against finfluencers) beats the S&P 500 by 6.8% in annual returns, at higher risk (Sharpe 0.41 vs 0.65).
 
 {% include todo.html text="Add one sentence on your own contribution (you are 4th author): e.g. which part of the pipeline, annotation protocol, or MLLM evaluation you owned." %}
 
