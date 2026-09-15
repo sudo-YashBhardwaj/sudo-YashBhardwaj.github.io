@@ -11,13 +11,13 @@ redirect_from:
 
 ![Tiny-VLA output: a wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid](/images/work/tiny-vla.jpg){: .align-right width="300px"}
 
-👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI (TRAI)** at **[École Polytechnique](https://www.polytechnique.edu/en)**
+👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**.
 
-🤖 I'm currently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**. {% include todo.html text="One sentence on the Inria project (what problem, what setting), as specific as you are allowed to be." %}
+🤖 Over summer 2026 I was a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**. {% include todo.html text="One sentence on what the Inria project was (what problem, what setting), as specific as you are allowed to be." %}
 
 🔬 My research interests are **3D perception**, **vision-language-action models (VLAs)**, **world models**, and **RL/post-training** for embodied AI.
 
-📚 I previously worked with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on multimodal video understanding, and spent three and a half years building production data and ML systems as a software engineer at **Urban Company**.
+📚 Before that, I worked with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on multimodal video understanding, and spent three and a half years building production data and ML systems as a software engineer at **Urban Company**.
 
 🔎 **Looking for research internships starting April 2027** in embodied AI, multimodal learning, diffusion / flow matching, and LLM pre- and post-training.
 

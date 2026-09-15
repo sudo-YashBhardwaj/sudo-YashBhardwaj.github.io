@@ -7,6 +7,9 @@ redirect_from:
 group: generative
 order: 3
 year_label: "2025 · reimplementation of Flash Diffusion (AAAI 2025)"
+teaser: "diffusion_distillation.png"
+teaser_fit: contain
+teaser_alt: "Teacher-student distillation schematic"
 tldr: "Distilled Stable Diffusion 1.5 into a ~4M-parameter LoRA student that matches a multi-step DDIM teacher: 2 / 4 / 8-step sampling at 0.12 / 0.16 / 0.25 s per image vs. 2.17 s for the baseline (up to 18× faster), trained on one 20 GB GPU."
 excerpt: "LoRA distillation of Stable Diffusion 1.5 for 2-8 step sampling, up to 18x faster."
 links:

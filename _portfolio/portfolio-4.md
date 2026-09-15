@@ -7,6 +7,9 @@ redirect_from:
 group: generative
 order: 5
 year_label: "2025 · independent project"
+teaser: "work/medclip.jpg"
+teaser_fit: contain
+teaser_alt: "CLIP contrastive pre-training diagram"
 tldr: "CLIP-style dual encoder (ResNet-18 + DistilBERT, ~50M parameters, ~8× smaller than CLIP ViT-L) trained with InfoNCE on ROCO image–caption pairs; R@1 0.28 / R@10 0.55 image–text retrieval with a FAISS index."
 excerpt: "Compact CLIP-style model for medical image-text retrieval on ROCO; R@1 0.28, R@10 0.55."
 links:

@@ -18,6 +18,4 @@ description: "Projects by Yash Bhardwaj: vision-language models for robot guidan
 {% for p in projects %}{% if p.group == "generative" %}{% include work-row.html item=p %}{% endif %}{% endfor %}
 
 <h2 class="work-group">Earlier coursework</h2>
-<ul class="work-list">
-{% for p in projects %}{% if p.group == "earlier" %}{% include work-row.html item=p compact=true %}{% endif %}{% endfor %}
-</ul>
+{% for p in projects %}{% if p.group == "earlier" %}{% include work-row.html item=p %}{% endif %}{% endfor %}

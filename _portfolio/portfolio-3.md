@@ -7,6 +7,8 @@ redirect_from:
 group: generative
 order: 6
 year_label: "2025 · independent project"
+teaser: "work/emotion-recognition.jpg"
+teaser_alt: "Real-time multimodal emotion recognition"
 tldr: "Live pipeline that fuses face (MTCNN + DeepFace), speech (Whisper + RoBERTa) and text sentiment with confidence-weighted late fusion, running at 100–300 ms per frame."
 excerpt: "Real-time late fusion of face, speech and text emotion signals at 100-300 ms per frame."
 links:

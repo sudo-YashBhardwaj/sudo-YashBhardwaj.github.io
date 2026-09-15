@@ -7,6 +7,8 @@ redirect_from:
 group: generative
 order: 4
 year_label: "2025 · independent project"
+teaser: "work/emotion-generation.jpg"
+teaser_alt: "Emotion-conditioned image generation overview"
 tldr: "Compared three ways to steer SD 1.5 toward one of 8 emotions (EmoSet-118K): LoRA-learned emotion tokens (0.4% trainable parameters; 15× faster training and 80% less memory than full fine-tuning), gradient guidance from a 2M-parameter noise-aware latent classifier, and BLIP + EmotionCLIP conditioning."
 excerpt: "Three approaches to emotion-conditioned generation with Stable Diffusion 1.5: LoRA emotion tokens, latent classifier guidance, and multimodal conditioning."
 links:

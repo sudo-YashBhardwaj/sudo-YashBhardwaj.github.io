@@ -25,7 +25,7 @@ author:
   avatar           : "profile-400.jpg"
   name             : "Yash Bhardwaj"
   pronouns         : # example: "she/her"
-  bio              : "Research intern, Inria Willow · MSc, École Polytechnique"
+  bio              : "MSc student, École Polytechnique · Research intern, Inria Willow (summer 2026)"
   location         : "Paris, France"
   employer         : # shown in bio instead, to keep the sidebar short
   uri              : # URL
@@ -33,9 +33,9 @@ author:
   cv               : "/files/Yash_Bhardwaj_VIS.pdf" # linked from the sidebar and nav; keep this path stable
 
   # Used only for search-engine structured data (JSON-LD) on the homepage
-  job_title        : "Machine Learning Researcher"
-  affiliations     : ["Inria Paris", "École Polytechnique"]
-  alumni_of        : ["Birla Institute of Technology and Science, Pilani", "Georgia Institute of Technology"]
+  job_title        : "MSc student in AI"
+  affiliations     : ["École Polytechnique"]
+  alumni_of        : ["Inria Paris", "Georgia Institute of Technology", "Birla Institute of Technology and Science, Pilani"]
   knows_about      : ["Vision-language-action models", "3D perception", "Robot learning", "Multimodal learning", "Diffusion models"]
 
   # Academic websites
