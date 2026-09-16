@@ -13,7 +13,7 @@ redirect_from:
 
 👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**.
 
-🤖 Over summer 2026 I was a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**. {% include todo.html text="One sentence on what the Inria project was (what problem, what setting), as specific as you are allowed to be." %}
+🤖 Over summer 2026 I was a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**, working on **object-centric 3D perception for manipulation**: an encoder that turns a fused point cloud of a scene into per-object tokens (instance mask, category, part, articulation, and identity across scenes), as the grounding layer a robot policy reads. {% include todo.html text="Check with your advisor what you may say publicly before merging. When the paper is out, add it to _publications/ with featured: true and link it from this line." %}
 
 🔬 My research interests are **3D perception**, **vision-language-action models (VLAs)**, **world models**, and **RL/post-training** for embodied AI.
 
