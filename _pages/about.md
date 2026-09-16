@@ -11,13 +11,13 @@ redirect_from:
 
 ![Tiny-VLA output: a wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid](/images/work/tiny-vla.jpg){: .align-right width="300px"}
 
-👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**.
+👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**, working on **multimodal and 3D representation learning for embodied AI**.
 
-🤖 Over summer 2026 I was a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris**, working on **object-centric 3D perception for manipulation**: an encoder that turns a fused point cloud of a scene into per-object tokens (instance mask, category, part, articulation, and identity across scenes), as the grounding layer a robot policy reads. {% include todo.html text="Check with your advisor what you may say publicly before merging. When the paper is out, add it to _publications/ with featured: true and link it from this line." %}
+🤖 Most recently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris** (summer 2026), on **3D representation learning**: pretraining an object-centric 3D encoder for robot manipulation policies. {% include todo.html text="When the paper is public, add it to _publications/ with featured: true and link it from this line. A quick advisor check on this wording is still worth it." %}
 
-🔬 My research interests are **3D perception**, **vision-language-action models (VLAs)**, **world models**, and **RL/post-training** for embodied AI.
+📄 Two papers with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on what multimodal LLMs understand in video: **[KDD 2025 (oral)]({{ base_path }}/publication/videoconviction/)** and an **[ICCV 2025 workshop]({{ base_path }}/publication/fincap/)**.
 
-📚 Before that, I worked with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on multimodal video understanding, and spent three and a half years building production data and ML systems as a software engineer at **Urban Company**.
+💻 I came to research from engineering: three and a half years as a software engineer at **Urban Company**, building production data and ML systems.
 
 🔎 **Looking for research internships starting April 2027** in embodied AI, multimodal learning, diffusion / flow matching, and LLM pre- and post-training.
 
@@ -25,7 +25,7 @@ redirect_from:
 
 ### What I'm focused on now
 - 🤖 **Vision-language-action models:** grounding language in what a robot sees, and turning it into actions a controller can use.
-- 🧊 **3D perception:** whether explicit geometry (depth, point clouds, 3D features) makes policies more sample-efficient and robust than 2D inputs alone.
+- 🧊 **3D representation learning:** whether explicit geometry (depth, point clouds, 3D features) makes policies more sample-efficient and robust than 2D inputs alone.
 - 🌍 **World models & control:** learning dynamics that are useful for *planning*, not only for prediction.
 - ⚙️ **Post-training & efficiency:** RL and preference-based fine-tuning of VLMs/VLAs; LoRA, quantization, and training on a single GPU.
 
