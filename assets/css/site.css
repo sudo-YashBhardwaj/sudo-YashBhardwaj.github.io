@@ -1302,6 +1302,60 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
+/* Phones: name, then the portrait, then the bio; portrait and links centred */
+@media (max-width: 700px) {
+  .hero {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas:
+      "name"
+      "portrait"
+      "summary"
+      "links"
+      "facts";
+  }
+
+  .hero-copy {
+    display: contents;
+  }
+
+  .hero-copy > h1 {
+    grid-area: name;
+    text-align: center;
+  }
+
+  .hero-aside {
+    grid-area: portrait;
+    justify-items: center;
+  }
+
+  .portrait-card {
+    width: min(100%, 200px);
+  }
+
+  .hero-summary {
+    grid-area: summary;
+    margin-top: 6px;
+  }
+
+  .hero-links {
+    grid-area: links;
+  }
+
+  .hero-facts {
+    grid-area: facts;
+  }
+
+  .hero-links {
+    justify-content: center;
+    max-width: none;
+  }
+
+  .hero-facts-inline {
+    text-align: center;
+    justify-items: center;
+  }
+}
+
 /* Nav: a centred cluster at every width. It keeps its spacing until the items
    would no longer fit, then tightens in two steps rather than spreading apart. */
 .site-nav {
@@ -1352,6 +1406,17 @@ a.publication-media:hover {
 /* The rule under the header: a plain line instead of a gradient that fades out at the ends */
 .site-header::after {
   background: var(--line-strong);
+}
+
+/* Sections sit closer together: 42/18px of padding gave about 115px of empty
+   space between one section's last line and the next heading; 28/10px gives
+   about 80px, which is what the Experience-to-Awards gap already was. */
+.section {
+  padding: 28px 0 10px;
+}
+
+.hero {
+  padding-bottom: 10px;
 }
 
 /* Skills: a full-width labelled list under the two experience columns */
