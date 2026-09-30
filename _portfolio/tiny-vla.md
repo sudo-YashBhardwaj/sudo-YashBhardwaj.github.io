@@ -15,7 +15,7 @@ links:
 
 <figure>
   <img src="/images/work/tiny-vla.jpg" alt="Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid" loading="lazy">
-  <figcaption>Model output on a wheel-loader camera frame. Q: "Where should I dig?" A: "Dig the dirt pile on the center, far at coordinates [618, 231, 1127, 479]. &lt;ACTION_APPROACH&gt;"</figcaption>
+  <figcaption>Model output on a wheel-loader camera frame. Q: "Where should I dig?" A: "Dig the dirt pile on the center, far at coordinates [730, 240, 1080, 395]. &lt;ACTION_APPROACH&gt;"</figcaption>
 </figure>
 
 **The problem.** An autonomous wheel loader has to decide where to dig from its forward camera. General-purpose vision-language models can describe a quarry, but they do not return a grounded target that a controller can act on.
