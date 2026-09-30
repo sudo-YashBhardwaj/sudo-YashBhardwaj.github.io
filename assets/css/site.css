@@ -1316,9 +1316,30 @@ a.publication-media:hover {
   font-size: 0.98rem;
 }
 
+/* Bulleted work descriptions inside experience entries */
+.cv-list .bullet-list {
+  margin-top: 2px;
+  padding-left: 18px;
+  font-size: 0.94rem;
+  line-height: 1.5;
+}
+
+.cv-list .bullet-list li + li {
+  margin-top: 4px;
+}
+
 /* Links inside experience and award entries read as links */
+.cv-item-head strong a {
+  color: var(--heading);
+}
+
+.cv-item-head strong a:hover {
+  color: var(--accent-strong);
+}
+
 .cv-detail a,
 .cv-note a,
+.bullet-list a,
 .award-detail a {
   color: var(--accent-strong);
   font-weight: 600;
@@ -1326,6 +1347,7 @@ a.publication-media:hover {
 
 .cv-detail a:hover,
 .cv-note a:hover,
+.bullet-list a:hover,
 .award-detail a:hover {
   color: var(--accent);
 }
