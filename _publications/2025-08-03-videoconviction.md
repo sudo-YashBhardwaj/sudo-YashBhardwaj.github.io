@@ -4,7 +4,7 @@ collection: publications
 permalink: /publication/videoconviction/
 date: 2025-08-03
 featured: true
-order: 1 # position on the homepage, strongest first
+order: 2 # position on the homepage
 authors: "Michael Galarnyk<sup>*</sup>, Veer Kejriwal<sup>*</sup>, Agam Shah<sup>*</sup>, Yash Bhardwaj, Nicholas Watney Meyer, Anand Krishnan, Sudheer Chava"
 venue: "31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2025), Toronto. Oral presentation."
 card_venue: "KDD Oral"
