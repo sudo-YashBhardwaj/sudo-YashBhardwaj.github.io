@@ -1302,6 +1302,20 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
+/* Hero links and the affiliation / research strip, one size up */
+.hero-links .button {
+  font-size: 0.95rem;
+}
+
+.fact-label {
+  font-size: 0.73rem;
+}
+
+.fact-block strong,
+.hero-facts-inline .fact-block strong {
+  font-size: 0.98rem;
+}
+
 /* Links inside experience and award entries read as links */
 .cv-detail a,
 .cv-note a,
