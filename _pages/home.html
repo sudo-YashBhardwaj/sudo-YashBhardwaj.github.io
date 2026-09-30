@@ -171,6 +171,24 @@ redirect_from:
                 </li>
               </ul>
             </div>
+
+            <div class="panel">
+              <h3>Teaching</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Teaching Assistant</strong>
+                  </div>
+                  <span class="cv-detail"><a href="https://www.bits-pilani.ac.in/">BITS Pilani</a></span>
+                  <ul class="module-list">
+                    <li>Data Structures and Algorithms</li>
+                    <li>Database Systems</li>
+                    <li>Computer Programming</li>
+                  </ul>
+                  {% include todo.html text="Add the years you were a TA (e.g. 2019-2021) in a cv-date span next to the title." %}
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
@@ -179,23 +197,23 @@ redirect_from:
           <ul class="cv-list service-list">
             <li>
               <strong>Tools</strong>
-              <span>Python, C++, PyTorch, Hugging Face (Transformers, Diffusers, PEFT, Accelerate), MuJoCo, RLBench, ALFWorld</span>
+              <span>Python, C++, PyTorch, Hugging Face (Transformers, Diffusers, PEFT, Accelerate), MuJoCo, RLBench</span>
             </li>
             <li>
               <strong>Post-training and RL</strong>
-              <span>Supervised fine-tuning, LoRA and 4-bit quantization; RL for LLM agents (RLOO, policy gradients); imitation learning</span>
+              <span>Supervised fine-tuning, LoRA and 4-bit quantization; RL and preference optimization for LLMs (PPO, GRPO, RLOO, DPO); imitation learning</span>
             </li>
             <li>
               <strong>Perception and control</strong>
-              <span>3D representation learning on point clouds (instance segmentation, object-centric tokens); vision-language-action policies; world models and planning (CEM, MPC)</span>
+              <span>3D representation learning on point clouds; vision-language-action policies; world models and planning (CEM, MPC)</span>
             </li>
             <li>
               <strong>Generative models</strong>
-              <span>Diffusion distillation for few-step sampling, classifier guidance, LoRA fine-tuning; CLIP-style contrastive learning</span>
+              <span>Diffusion distillation and classifier guidance; CLIP-style contrastive learning</span>
             </li>
             <li>
               <strong>Evaluation and data</strong>
-              <span>Benchmarks of multimodal LLMs on video with LLM-as-judge scoring; simulator-rendered and VLM auto-labelled datasets; pre-registered experiments with permutation tests</span>
+              <span>Multimodal LLM benchmarks with LLM-as-judge scoring; simulator-rendered and VLM auto-labelled datasets; pre-registered experiments</span>
             </li>
           </ul>
         </div>
@@ -224,6 +242,5 @@ redirect_from:
               </div>
             </li>
           </ul>
-          {% include todo.html text="Add any other awards (scholarships, department ranks, hackathons). Four or five entries read better than two." %}
         </div>
       </section>
