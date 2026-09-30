@@ -9,8 +9,6 @@ redirect_from:
   - /about.html
 ---
 
-![Tiny-VLA output: a wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid](/images/work/tiny-vla.jpg){: .align-right width="300px"}
-
 👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**, working on **multimodal and 3D representation learning for embodied AI**.
 
 🤖 Most recently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris** (summer 2026), on **3D representation learning**: pretraining an object-centric 3D encoder for robot manipulation policies. {% include todo.html text="When the paper is public, add it to _publications/ with featured: true and link it from this line. A quick advisor check on this wording is still worth it." %}
@@ -46,6 +44,10 @@ redirect_from:
   - Reference-free evaluation (G-VEval) plus F1 on ticker–action pairs.
 
 ### Projects
+- **[Branch or restart?](/projects/branch-or-restart/):** where should an on-policy RL budget go, to fresh rollouts or to continuations of a trajectory already seen?
+  - Continuations are **43-62% cheaper per success**, but 54-67% of their groups return identical rewards, which is exactly **zero RLOO gradient**.
+  - Whether a group will have contrast is predictable before sampling (held-out log loss 0.491 vs 0.650), yet no allocation rule built on it beat always restarting.
+  - The RLOO run itself lifts **Qwen3-1.7B** on ALFWorld from **58.2% to 64.6%** over 268 untouched episodes (sign test p = 0.019).
 - **[Tiny-VLA](/projects/tiny-vla/):** fine-tuned **Qwen3-VL-2B** (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target (a bounding box, a spatial instruction and a discrete action token), on a single consumer GPU.
 - **[Differentiable MPC](/projects/differentiable-mpc/):** all 8 seeds reach imitation loss < 1e-3 and recover the identifiable ratios *g/l* and *1/(ml²)* to within 2%, while *g* alone lands anywhere from 7 to 17, so parameter MSE penalizes a direction the data cannot observe.
 - **[Diffusion distillation](/projects/diffusion-distillation/):** a ~4M-parameter LoRA student matching a multi-step DDIM teacher: 2/4/8-step sampling at 0.12/0.16/0.25 s per image vs 2.17 s (up to **18× faster**).
