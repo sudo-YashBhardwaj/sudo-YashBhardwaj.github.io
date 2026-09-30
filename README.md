@@ -33,3 +33,5 @@ bundle exec jekyll serve --livereload
 ```
 
 Then open <http://localhost:4000>. Edits to pages rebuild automatically; edits to `_config.yml` need a restart.
+
+To check the site exactly as GitHub Pages publishes it (no author-facing reminders), build with `JEKYLL_ENV=production bundle exec jekyll build` and open `_site/index.html`.
