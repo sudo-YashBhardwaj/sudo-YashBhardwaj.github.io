@@ -1302,6 +1302,20 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
+/* Links inside experience and award entries read as links */
+.cv-detail a,
+.cv-note a,
+.award-detail a {
+  color: var(--accent-strong);
+  font-weight: 600;
+}
+
+.cv-detail a:hover,
+.cv-note a:hover,
+.award-detail a:hover {
+  color: var(--accent);
+}
+
 /* Listing pages: all publications, all projects */
 .listing-group {
   margin: 34px 0 10px;
