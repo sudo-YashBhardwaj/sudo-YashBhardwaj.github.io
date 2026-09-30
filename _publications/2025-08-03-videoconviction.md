@@ -10,13 +10,11 @@ venue: "31st ACM SIGKDD Conference on Knowledge Discovery and Data Mining (KDD 2
 card_venue: "KDD Oral"
 card_year: "2025"
 summary: "A benchmark of 288 finfluencer videos (43 hours, 6,000+ expert annotations) that asks which stock is recommended, what action is advised and how strongly the speaker believes it. Across 16 LLMs and 6 video MLLMs, ticker extraction reaches 86% F1, but adding the action caps the best model at 54%, and adding conviction at 28%."
-teaser: "work/videoconviction.jpg"
+teaser: "work/videoconviction-v2.jpg"
 teaser_alt: "Growth of $100 invested in each strategy from 2018 to 2024: betting against finfluencers, following them, and index funds"
 links:
   - label: "Paper"
     url: "https://doi.org/10.1145/3711896.3737417"
-  - label: "arXiv"
-    url: "https://arxiv.org/abs/2507.08104"
   - label: "Code"
     url: "https://github.com/gtfintechlab/VideoConviction"
   - label: "Dataset"
@@ -30,7 +28,7 @@ links:
 ---
 
 <figure>
-  <img src="/images/work/videoconviction.jpg" alt="Growth of $100 invested in each strategy from 2018 to 2024: betting against finfluencers, following them, and index funds" loading="lazy">
+  <img src="/images/work/videoconviction-v2.jpg" alt="Growth of $100 invested in each strategy from 2018 to 2024: betting against finfluencers, following them, and index funds" loading="lazy">
   <figcaption>Growth of $100 in each strategy, January 2018 to August 2024. Betting against the finfluencers finishes highest, with far larger swings; simply following their picks trails the S&amp;P 500.</figcaption>
 </figure>
 

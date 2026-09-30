@@ -1354,6 +1354,12 @@ a.publication-media:hover {
     text-align: center;
     justify-items: center;
   }
+
+  /* Section signposts and the back link on paper and project pages; body text stays left-aligned */
+  .section-heading,
+  .article-back {
+    text-align: center;
+  }
 }
 
 /* Nav: a centred cluster at every width. It keeps its spacing until the items
