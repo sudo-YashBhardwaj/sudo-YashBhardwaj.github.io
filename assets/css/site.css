@@ -1302,6 +1302,26 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
+/* Third row in the facts strip: tools, full width under affiliation and research */
+.hero-facts-inline {
+  grid-template-areas:
+    "affiliation focus"
+    "skills skills";
+}
+
+.fact-block-skills {
+  grid-area: skills;
+}
+
+@media (max-width: 700px) {
+  .hero-facts-inline {
+    grid-template-areas:
+      "affiliation"
+      "focus"
+      "skills";
+  }
+}
+
 /* Hero links and the affiliation / research strip, one size up */
 .hero-links .button {
   font-size: 0.95rem;
