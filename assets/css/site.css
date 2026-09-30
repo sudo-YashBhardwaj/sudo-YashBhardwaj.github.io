@@ -1302,15 +1302,20 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
-/* Third row in the facts strip: tools, full width under affiliation and research */
+/* Facts strip: affiliation and research on the first row, methods and tools on the second */
 .hero-facts-inline {
   grid-template-areas:
     "affiliation focus"
-    "skills skills";
+    "methods methods"
+    "tools tools";
 }
 
-.fact-block-skills {
-  grid-area: skills;
+.fact-block-methods {
+  grid-area: methods;
+}
+
+.fact-block-tools {
+  grid-area: tools;
 }
 
 @media (max-width: 700px) {
@@ -1318,7 +1323,8 @@ a.publication-media:hover {
     grid-template-areas:
       "affiliation"
       "focus"
-      "skills";
+      "methods"
+      "tools";
   }
 }
 
