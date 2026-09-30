@@ -1656,6 +1656,12 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
   }
 }
 
+/* Portrait: centred in its ring. The original anchored it to the bottom (object-position: center bottom),
+   which on real phones let sub-pixel rounding push the photo against the bottom of the ring. */
+.portrait-card img {
+  object-position: center;
+}
+
 /* Small label text one size up: nothing below 12px. Kept last so it wins over the rules above. */
 .venue,
 .year {
