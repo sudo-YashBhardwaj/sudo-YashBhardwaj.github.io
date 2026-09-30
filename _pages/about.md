@@ -1,72 +1,109 @@
 ---
 permalink: /
-title: "👋 Hello there! I'm Yash"
-seo_title: "Yash Bhardwaj · 3D perception, VLAs and embodied AI"
-description: "Yash Bhardwaj is an ML researcher (Inria Willow, École Polytechnique) working on 3D perception, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
-author_profile: true
+home: true
+author_profile: false
+seo_title: "Yash Bhardwaj · 3D representation learning, VLAs and embodied AI"
+description: "Yash Bhardwaj is an ML researcher (École Polytechnique, Inria Willow) working on 3D representation learning, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
 redirect_from:
   - /about/
   - /about.html
 ---
 
-<figure class="home-figure">
-  <a href="{{ base_path }}/projects/branch-or-restart/"><img src="{{ base_path }}/images/work/branch-or-restart-hero.svg" alt="An observed agent trajectory: four fresh rollouts fan out from the start state, four continuations fan out from an anchor part-way along it"></a>
-  <figcaption>Where should an on-policy RL budget go: fresh rollouts, or continuations of a trajectory already seen? From <a href="{{ base_path }}/projects/branch-or-restart/">Branch or restart?</a></figcaption>
-</figure>
+{% include base_path %}
 
-👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**, working on **multimodal and 3D representation learning for embodied AI**.
+<header class="home-header">
+  <div>
+    <h1 class="home-name">Yash Bhardwaj</h1>
+    <p class="home-bio">I am a master's student in Trustworthy and Responsible AI at <a href="https://www.polytechnique.edu/en">École Polytechnique</a>, working on multimodal and 3D representation learning for embodied AI. Over summer 2026 I was a research intern with the <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris, pretraining an object-centric 3D encoder for robot manipulation policies. Before that, at Georgia Tech's <a href="https://qcf.gatech.edu/partner">Financial Services Innovation Lab</a>, I worked on what multimodal LLMs actually understand in video, with papers at KDD 2025 (oral) and an ICCV 2025 workshop. I came to research from engineering: three and a half years as a software engineer at Urban Company, building production data and ML systems.</p>
+    <p class="home-availability"><strong>I am looking for research internships starting April 2027</strong> in embodied AI, multimodal learning, diffusion and flow matching, and LLM pre- and post-training.</p>
+    <ul class="home-inline-links">
+      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+      <li><a href="{{ site.author.cv | prepend: base_path }}">CV</a></li>
+      <li><a href="{{ site.author.googlescholar }}">Google Scholar</a></li>
+      <li><a href="https://github.com/{{ site.author.github }}">GitHub</a></li>
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a></li>
+    </ul>
+  </div>
+  <figure class="home-portrait">
+    <img src="{{ base_path }}/images/profile-400.jpg" alt="Yash Bhardwaj" width="400" height="400">
+  </figure>
+</header>
 
-🤖 Most recently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris** (summer 2026), on **3D representation learning**: pretraining an object-centric 3D encoder for robot manipulation policies. {% include todo.html text="When the paper is public, add it to _publications/ with featured: true and link it from this line. A quick advisor check on this wording is still worth it." %}
+<dl class="home-facts">
+  <div>
+    <dt>Affiliation</dt>
+    <dd>École Polytechnique, IP Paris</dd>
+  </div>
+  <div>
+    <dt>Research</dt>
+    <dd>3D representation learning, vision-language-action models, world models, RL post-training</dd>
+  </div>
+</dl>
 
-📄 Two papers with Georgia Tech's **[Financial Services Innovation Lab](https://qcf.gatech.edu/partner)** on what multimodal LLMs understand in video: **[KDD 2025 (oral)]({{ base_path }}/publication/videoconviction/)** and an **[ICCV 2025 workshop]({{ base_path }}/publication/fincap/)**.
+<section class="home-section" id="publications">
+  <p class="eyebrow">Selected research</p>
+  <h2>Publications</h2>
+  {% assign featured_pubs = site.publications | where: "featured", true | sort: "order" %}
+  {% for p in featured_pubs %}{% include work-row.html item=p %}{% endfor %}
+  <p class="more-link"><a href="{{ base_path }}/publications/">All publications</a> · <a href="{{ site.author.googlescholar }}">Google Scholar</a></p>
+</section>
 
-💻 I came to research from engineering: three and a half years as a software engineer at **Urban Company**, building production data and ML systems.
+<section class="home-section" id="projects">
+  <p class="eyebrow">Independent work</p>
+  <h2>Projects</h2>
+  {% assign projects = site.portfolio | sort: "order" %}
+  {% for p in projects %}{% if p.group == "embodied" %}{% include work-row.html item=p %}{% endif %}{% endfor %}
+  <p class="more-link"><a href="{{ base_path }}/portfolio/">All projects</a> · <a href="https://github.com/{{ site.author.github }}">GitHub</a></p>
+</section>
 
-🔎 **Looking for research internships starting April 2027** in embodied AI, multimodal learning, diffusion / flow matching, and LLM pre- and post-training.
+<section class="home-section" id="experience">
+  <p class="eyebrow">Academic record</p>
+  <h2>Experience</h2>
+  <div class="home-cols">
+    <div>
+      <p class="home-sub">Education</p>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">MSc&amp;T, Trustworthy and Responsible AI</span><span class="entry__when">2025 – present</span></div>
+        <p class="entry__meta">École Polytechnique, IP Paris. Charpak scholar.</p>
+      </div>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">B.E., Computer Science</span><span class="entry__when">2017 – 2021</span></div>
+        <p class="entry__meta">Birla Institute of Technology and Science, Pilani.</p>
+      </div>
+      <p class="home-sub">Industry</p>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">Software Developer II</span><span class="entry__when">2021 – 2025</span></div>
+        <p class="entry__meta">Urban Company. Distributed product-catalog cache (Kafka, Redis, MongoDB; 27K products, 5 countries, 40% lower latency); demand-aware pricing models (+4% revenue on $80M+ of transactions).</p>
+      </div>
+      <p class="home-sub">Tools</p>
+      <p class="entry__meta">Python, PyTorch, Hugging Face, Docker, AWS. Kafka, Redis, MongoDB, Elasticsearch, Snowflake.</p>
+    </div>
+    <div>
+      <p class="home-sub">Research experience</p>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">Research Intern, Willow</span><span class="entry__when">summer 2026</span></div>
+        <p class="entry__meta">Inria Paris. Object-centric 3D encoders for manipulation policies.</p>
+      </div>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">Research Intern</span><span class="entry__when">2024 – 2025</span></div>
+        <p class="entry__meta">Financial Services Innovation Lab, Georgia Tech. Multimodal video benchmarks; KDD 2025 oral and an ICCV 2025 workshop paper.</p>
+      </div>
+      <div class="entry">
+        <div class="entry__row"><span class="entry__name">Research Intern, MIDAS</span><span class="entry__when">2021</span></div>
+        <p class="entry__meta">IIIT-Delhi. Author profiling with graph neural networks on S2ORC (600K papers, 160K authors).</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-> I love end-to-end work: data → modeling → eval → lightweight demos.
+<section class="home-section" id="honours">
+  <p class="eyebrow">Recognition</p>
+  <h2>Honours</h2>
+  <ul class="dated-list dated-list--wide">
+    <li><span class="when">2025</span><span><strong>Charpak Master's Scholarship</strong><br><span class="home-footnote">56 scholars selected from 2,500+ applicants.</span></span></li>
+    <li><span class="when">2022</span><span><strong>CodeChef Long Challenge, world rank 4 and 6</strong><br><span class="home-footnote">September and October 2022, 10,000+ participants.</span></span></li>
+  </ul>
+  {% include todo.html text="Add any other awards from your CV here (department rank, scholarships, hackathons). Three or four entries look better than two." %}
+</section>
 
-### What I'm focused on now
-- 🤖 **Vision-language-action models:** grounding language in what a robot sees, and turning it into actions a controller can use.
-- 🧊 **3D representation learning:** whether explicit geometry (depth, point clouds, 3D features) makes policies more sample-efficient and robust than 2D inputs alone.
-- 🌍 **World models & control:** learning dynamics that are useful for *planning*, not only for prediction.
-- ⚙️ **Post-training & efficiency:** RL and preference-based fine-tuning of VLMs/VLAs; LoRA, quantization, and training on a single GPU.
-
-## Selected Highlights
-
-### Publications
-- **[VideoConviction (KDD 2025, Oral)](/publication/videoconviction/):**
-  The first expert-annotated **multimodal finance benchmark**, capturing *conviction* in stock market recommendations from YouTube finfluencers.
-  - 6,000+ annotations across 288 videos (43 hrs), 457 annotation hours.
-  - Benchmarks LLMs and MLLMs on ticker/action/conviction extraction.
-  - Betting *against* finfluencers beats the S&P 500 by 6.8%/yr, at higher risk (Sharpe 0.41 vs 0.65).
-  - Dataset + code on [GitHub](https://github.com/gtfintechlab/VideoConviction) / [Hugging Face](https://huggingface.co/datasets/gtfintechlab/VideoConviction).
-
-- **[FinCap (ICCV 2025 Workshop, Short Video Understanding)](/publication/fincap/):**
-  Topic-aligned captioning benchmark for financial short videos.
-  - All 7 transcript/audio/video combinations across 624 clips and 5 topics.
-  - **Video alone is strongest on 4 of 5 topics**; pairs like TV or AV often beat all three, so more modalities can add noise.
-  - Reference-free evaluation (G-VEval) plus F1 on ticker–action pairs.
-
-### Projects
-- **[Planner Atlas](/projects/planner-atlas/):** a planner searching a learned world model favours plans whose cost the model underestimates. Which data repairs it?
-  - Repairing on the **planner's own** data cut its top-choice regret **14%** against random data (pre-registered, 12 seeds, sign-flip **p = 0.0015**).
-  - But **random** data is what improved closed-loop control (+0.099 against +0.010), and **held-out loss tracked neither**: "better model" depended on the use.
-  - Two pre-registered follow-ups were closed at their gates, one a **NO-GO**, and are reported in full.
-- **[Branch or restart?](/projects/branch-or-restart/):** where should an on-policy RL budget go, to fresh rollouts or to continuations of a trajectory already seen?
-  - Continuations are **43-62% cheaper per success**, but 54-67% of their groups return identical rewards, which is exactly **zero RLOO gradient**.
-  - Whether a group will have contrast is predictable before sampling (held-out log loss 0.491 vs 0.650), yet no allocation rule built on it beat always restarting.
-  - The RLOO run itself lifts **Qwen3-1.7B** on ALFWorld from **58.2% to 64.6%** over 268 untouched episodes (sign test p = 0.019).
-- **[Tiny-VLA](/projects/tiny-vla/):** fine-tuned **Qwen3-VL-2B** (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target (a bounding box, a spatial instruction and a discrete action token), on a single consumer GPU.
-- **[Differentiable MPC](/projects/differentiable-mpc/):** all 8 seeds reach imitation loss < 1e-3 and recover the identifiable ratios *g/l* and *1/(ml²)* to within 2%, while *g* alone lands anywhere from 7 to 17, so parameter MSE penalizes a direction the data cannot observe.
-- **[Diffusion distillation](/projects/diffusion-distillation/):** a ~4M-parameter LoRA student matching a multi-step DDIM teacher: 2/4/8-step sampling at 0.12/0.16/0.25 s per image vs 2.17 s (up to **18× faster**).
-
-### Background
-- 🎓 **MSc&T Trustworthy and Responsible AI**: [École Polytechnique](https://www.polytechnique.edu/en) (current), Charpak scholar (56 selected from 2,500+ applicants)
-- 🎓 **B.E., Computer Science**: [BITS Pilani](https://www.bits-pilani.ac.in/), India
-- 🧪 **Research**: [Inria Paris](https://www.di.ens.fr/willow/) (Willow), [Georgia Tech](https://www.gatech.edu/) (multimodal video), [IIIT-Delhi](https://midas.iiitd.ac.in/bio) (author profiling, citation/keyphrase gen)
-- 💻 **Industry**: Software Developer II at Urban Company (2021–25); distributed product-catalog cache (27K products, 5 countries, −40% latency); demand-aware pricing (+4% revenue on $80M+ of transactions)
-
-### Let's collaborate
-I'm especially interested in **VLAs**, **3D representations for robot learning**, **world models**, **diffusion / flow matching**, and **LLM pre- and post-training**.
-If you're building in these areas, or have a research internship opening from April 2027, I'd love to chat. Email is the best way to reach me: <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>.
+<p class="home-footnote-center">Paris, France · Central European Time (UTC+1 / UTC+2) · <a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></p>
