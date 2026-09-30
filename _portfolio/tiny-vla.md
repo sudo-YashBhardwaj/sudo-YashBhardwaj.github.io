@@ -3,7 +3,7 @@ title: "Tiny-VLA: grounded dig-target guidance for wheel loaders"
 collection: portfolio
 permalink: /projects/tiny-vla/
 group: embodied
-order: 1
+order: 2
 year_label: "2026 · independent project"
 teaser: "work/tiny-vla.jpg"
 teaser_alt: "Wheel-loader camera frame with the predicted target pile boxed and the model's instruction overlaid"

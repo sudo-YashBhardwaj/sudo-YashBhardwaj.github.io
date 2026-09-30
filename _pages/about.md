@@ -49,6 +49,10 @@ redirect_from:
   - Reference-free evaluation (G-VEval) plus F1 on ticker–action pairs.
 
 ### Projects
+- **[Planner Atlas](/projects/planner-atlas/):** a planner searching a learned world model favours plans whose cost the model underestimates. Which data repairs it?
+  - Repairing on the **planner's own** data cut its top-choice regret **14%** against random data (pre-registered, 12 seeds, sign-flip **p = 0.0015**).
+  - But **random** data is what improved closed-loop control (+0.099 against +0.010), and **held-out loss tracked neither**: "better model" depended on the use.
+  - Two pre-registered follow-ups were closed at their gates, one a **NO-GO**, and are reported in full.
 - **[Branch or restart?](/projects/branch-or-restart/):** where should an on-policy RL budget go, to fresh rollouts or to continuations of a trajectory already seen?
   - Continuations are **43-62% cheaper per success**, but 54-67% of their groups return identical rewards, which is exactly **zero RLOO gradient**.
   - Whether a group will have contrast is predictable before sampling (held-out log loss 0.491 vs 0.650), yet no allocation rule built on it beat always restarting.

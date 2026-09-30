@@ -3,7 +3,7 @@ title: "Branch or restart? Rollout allocation for RLOO fine-tuning of LLM agents
 collection: portfolio
 permalink: /projects/branch-or-restart/
 group: embodied
-order: 0
+order: 1
 year_label: "2026 · independent research project"
 teaser: "work/branch-or-restart.svg"
 teaser_fit: contain

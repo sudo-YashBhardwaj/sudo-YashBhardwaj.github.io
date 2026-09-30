@@ -3,7 +3,7 @@ title: "What does imitation identify? Differentiable MPC on the pendulum"
 collection: portfolio
 permalink: /projects/differentiable-mpc/
 group: embodied
-order: 2
+order: 3
 year_label: "2026 · course project, reproduction of Amos et al. (NeurIPS 2018)"
 teaser: "work/diff-mpc-thumb.png"
 teaser_fit: contain
