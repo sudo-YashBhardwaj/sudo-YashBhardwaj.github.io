@@ -104,7 +104,7 @@ redirect_from:
                   <span class="cv-detail">Research Intern, advised by <a href="https://cordeliaschmid.github.io/">Cordelia Schmid</a> and <a href="https://cshizhe.github.io/">Shizhe Chen</a></span>
                   <ul class="bullet-list">
                     <li>Pretrained a Point Transformer V3 encoder with a query-based mask decoder on simulator-rendered scenes, so that each object token carries an instance mask, class, part-whole relation, articulation and cross-scene identity.</li>
-                    <li>Plugged the tokens into 3D vision-language-action policies in place of dense point features, and benchmarked encoder-policy combinations on RLBench and GemBench (16 tasks).</li>
+                    <li>Plugged the tokens into 3D vision-language-action policies in place of dense point features, and benchmarked encoder-policy combinations on RLBench and RoboCasa.</li>
                   </ul>
                 </li>
                 <li>
@@ -114,8 +114,8 @@ redirect_from:
                   </div>
                   <span class="cv-detail">Research Intern</span>
                   <ul class="bullet-list">
-                    <li><a href="{{ base_path }}/publication/videoconviction/">VideoConviction</a> (KDD 2025, oral): a benchmark of 288 finfluencer videos with 6,000+ expert annotations (457 hours), evaluating LLMs and video MLLMs on ticker, action and conviction extraction.</li>
-                    <li><a href="{{ base_path }}/publication/fincap/">FinCap</a> (ICCV 2025 workshop): 624 short videos, 7 modality combinations and 5 topics, benchmarking modality fusion for recommendation, sentiment, visual analysis and entity extraction.</li>
+                    <li><a href="{{ base_path }}/publication/videoconviction/">VideoConviction</a> (KDD 2025, oral): a benchmark of how well LLMs and video MLLMs read a speaker's conviction in stock recommendations: 288 finfluencer videos, 6,000+ expert annotations (457 hours).</li>
+                    <li><a href="{{ base_path }}/publication/fincap/">FinCap</a> (ICCV 2025 workshop): a benchmark for topic-aligned caption generation on financial short videos: 624 clips, 5 topics, all 7 transcript, audio and video combinations across 5 multimodal LLMs.</li>
                   </ul>
                 </li>
                 <li>
@@ -142,7 +142,7 @@ redirect_from:
                     <span class="cv-date">2025-present</span>
                   </div>
                   <span class="cv-detail"><a href="https://www.polytechnique.edu/">École Polytechnique</a>, IP Paris. <a href="https://www.inde.campusfrance.org/charpak-master-s-scholarship">Charpak Master's Scholarship</a></span>
-                  <em class="cv-note">Coursework: Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, Collaborative Learning</em>
+                  <em class="cv-note">Coursework: Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, Multimodal Generative AI</em>
                 </li>
                 <li>
                   <div class="cv-item-head">
@@ -196,7 +196,7 @@ redirect_from:
           <ul class="cv-list service-list">
             <li>
               <strong>Tools</strong>
-              <span>Python, C++, PyTorch, Hugging Face (Transformers, Diffusers, PEFT, Accelerate), MuJoCo, RLBench</span>
+              <span>Python, C++, PyTorch, Hugging Face (Transformers, Diffusers, PEFT, Accelerate), distributed multi-GPU training on SLURM clusters, MuJoCo, RLBench</span>
             </li>
             <li>
               <strong>LLM and VLM post-training</strong>
