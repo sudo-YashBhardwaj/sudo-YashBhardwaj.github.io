@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300" role="img" aria-label="An observed agent trajectory: four fresh rollouts fan out from the start state, four continuations fan out from an anchor part-way along it" font-family="system-ui, -apple-system, 'Segoe UI', Helvetica, Arial, sans-serif">
+  <rect x="0.5" y="0.5" width="479" height="299" rx="12" fill="#fcfcfb" stroke="rgba(11,11,11,0.10)"/>
+
+  <!-- restart: fresh rollouts from the start state -->
+  <g fill="none" stroke="#2a78d6" stroke-width="2" stroke-linecap="round">
+    <path d="M58,178 C120,118 200,94 266,90"/>
+    <path d="M58,178 C120,132 210,110 292,108"/>
+    <path d="M58,178 C120,146 220,128 316,128"/>
+    <path d="M58,178 C120,158 230,148 338,150"/>
+  </g>
+  <g fill="#2a78d6">
+    <circle cx="266" cy="90" r="4"/>
+    <circle cx="292" cy="108" r="4"/>
+    <circle cx="316" cy="128" r="4"/>
+    <circle cx="338" cy="150" r="4"/>
+  </g>
+
+  <!-- branch: continuations from the anchor -->
+  <g fill="none" stroke="#eb6834" stroke-width="2" stroke-linecap="round">
+    <path d="M178,178 C214,204 258,216 298,220"/>
+    <path d="M178,178 C214,212 264,230 318,238"/>
+    <path d="M178,178 C214,218 270,244 334,254"/>
+    <path d="M178,178 C214,224 274,256 348,268"/>
+  </g>
+  <g fill="#eb6834">
+    <circle cx="298" cy="220" r="4"/>
+    <circle cx="318" cy="238" r="4"/>
+    <circle cx="334" cy="254" r="4"/>
+    <circle cx="348" cy="268" r="4"/>
+  </g>
+
+  <!-- the observed trajectory -->
+  <line x1="58" y1="178" x2="312" y2="178" stroke="#898781" stroke-width="2"/>
+  <g fill="#d9d8d1" stroke="#898781" stroke-width="1.5">
+    <circle cx="88" cy="178" r="5"/>
+    <circle cx="118" cy="178" r="5"/>
+    <circle cx="148" cy="178" r="5"/>
+    <circle cx="208" cy="178" r="5"/>
+    <circle cx="238" cy="178" r="5"/>
+    <circle cx="268" cy="178" r="5"/>
+    <circle cx="298" cy="178" r="5"/>
+  </g>
+  <circle cx="58" cy="178" r="6.5" fill="#898781"/>
+  <circle cx="178" cy="178" r="9" fill="#fcfcfb" stroke="#0b0b0b" stroke-width="2.5"/>
+  <circle cx="178" cy="178" r="3.5" fill="#0b0b0b"/>
+  <rect x="318" y="171" width="14" height="14" rx="2" fill="#52514e"/>
+
+  <text x="58" y="207" font-size="15" fill="#898781">observed trajectory</text>
+  <text x="356" y="96" font-size="18" font-weight="600" fill="#2a78d6">restart</text>
+  <text x="372" y="236" font-size="18" font-weight="600" fill="#eb6834">branch</text>
+</svg>

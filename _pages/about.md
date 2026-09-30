@@ -9,6 +9,11 @@ redirect_from:
   - /about.html
 ---
 
+<figure class="home-figure">
+  <a href="{{ base_path }}/projects/branch-or-restart/"><img src="{{ base_path }}/images/work/branch-or-restart-hero.svg" alt="An observed agent trajectory: four fresh rollouts fan out from the start state, four continuations fan out from an anchor part-way along it"></a>
+  <figcaption>Where should an on-policy RL budget go: fresh rollouts, or continuations of a trajectory already seen? From <a href="{{ base_path }}/projects/branch-or-restart/">Branch or restart?</a></figcaption>
+</figure>
+
 👨🏻‍🎓 I'm a master's student in **Trustworthy & Responsible AI** at **[École Polytechnique](https://www.polytechnique.edu/en)**, working on **multimodal and 3D representation learning for embodied AI**.
 
 🤖 Most recently a **research intern** with the **[Willow team](https://www.di.ens.fr/willow/)** at **Inria Paris** (summer 2026), on **3D representation learning**: pretraining an object-centric 3D encoder for robot manipulation policies. {% include todo.html text="When the paper is public, add it to _publications/ with featured: true and link it from this line. A quick advisor check on this wording is still worth it." %}

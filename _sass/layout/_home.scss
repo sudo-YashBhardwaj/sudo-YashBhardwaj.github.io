@@ -64,6 +64,37 @@ html[data-theme="dark"] {
   }
 }
 
+/* Captioned figure floated beside the homepage intro
+   ========================================================================== */
+
+.page__content .home-figure {
+  float: right;
+  width: 330px;
+  max-width: 46%;
+  margin: 0.2em 0 1em 1.6em;
+
+  img {
+    display: block;
+    width: 100%;
+    border: 0;          // the figure carries its own card border
+    border-radius: 0;
+  }
+
+  figcaption {
+    margin-top: 0.5em;
+    font-size: $type-size-6;
+    line-height: 1.45;
+    color: var(--global-text-color-light);
+  }
+
+  @media (max-width: 37.5em) {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 1.4em;
+  }
+}
+
 /* Dated lists: news and experience
    ========================================================================== */
 
