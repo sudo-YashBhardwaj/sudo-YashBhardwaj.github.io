@@ -6,7 +6,7 @@ order: 2 # position on the homepage
 card_venue: "Independent Project"
 card_year: "2026"
 summary: "Fine-tuned Qwen3-VL-2B with LoRA on a 4-bit base (17M trainable parameters, 0.8%) to tell a wheel loader where to dig: a target bounding box, its spatial position and a discrete action. Trained on 848 frames labelled automatically by a Florence-2 data engine, in about 10 GB of GPU memory."
-teaser: "work/tiny-vla.jpg"
+teaser: "work/tiny-vla-v2.jpg"
 teaser_alt: "Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid"
 links:
   - label: "Code"
@@ -14,7 +14,7 @@ links:
 ---
 
 <figure>
-  <img src="/images/work/tiny-vla.jpg" alt="Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid" loading="lazy">
+  <img src="/images/work/tiny-vla-v2.jpg" alt="Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid" loading="lazy">
   <figcaption>Model output on a wheel-loader camera frame. Q: "Where should I dig?" A: "Dig the dirt pile on the center, far at coordinates [730, 240, 1080, 395]. &lt;ACTION_APPROACH&gt;"</figcaption>
 </figure>
 

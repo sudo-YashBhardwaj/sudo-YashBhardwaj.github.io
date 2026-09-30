@@ -8,7 +8,7 @@ order: 5 # position on the homepage
 card_venue: "Independent Project"
 card_year: "2025"
 summary: "Fine-tuned Stable Diffusion 1.5 to generate images that evoke one of 8 emotions, on 100K images with LoRA (0.4% of parameters trainable): 15× faster training and 80% less memory than full fine-tuning. Compares learned emotion tokens, latent classifier guidance and multimodal conditioning."
-teaser: "work/emotion-generation.jpg"
+teaser: "work/emotion-generation-v2.jpg"
 teaser_alt: "Emotion-conditioned scene generation: a caption and an emotion condition the diffusion model, and classifier guidance steers sampling toward the target emotion"
 links:
   - label: "Code"
@@ -16,7 +16,7 @@ links:
 ---
 
 <figure>
-  <img src="/images/work/emotion-generation.jpg" alt="Emotion-conditioned scene generation: a caption and an emotion condition the diffusion model, and classifier guidance steers sampling toward the target emotion" loading="lazy">
+  <img src="/images/work/emotion-generation-v2.jpg" alt="Emotion-conditioned scene generation: a caption and an emotion condition the diffusion model, and classifier guidance steers sampling toward the target emotion" loading="lazy">
   <figcaption>The pipeline: a scene caption and a target emotion condition the diffusion model, and an emotion classifier can guide or reinforce sampling. Illustration.</figcaption>
 </figure>
 
