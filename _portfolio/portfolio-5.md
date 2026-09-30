@@ -1,16 +1,25 @@
 ---
-title: "Named Entity Recognition with Bi-LSTM"
-excerpt: "Deep learning NER system achieving 98% accuracy on general text and 70.74% weighted F1-score on biomedical domain, demonstrating effective transfer learning from general to specialized domains.<br/><img src='/images/NER.png' width='600'>"
+title: "Named entity recognition: general to biomedical transfer"
 collection: portfolio
+published: false # not listed on the site (dropped from the CV too); set to true to restore
+card_venue: "Coursework"
+summary: "A Bi-LSTM tagger transferred from general-domain NER to biomedical text (BC5CDR), reaching entity-level F1 of 54.8%."
+permalink: /projects/named-entity-recognition/
+redirect_from:
+  - /portfolio/portfolio-5/
+group: earlier
+order: 20
+teaser: "work/ner.jpg"
+teaser_alt: "Named entity recognition illustration"
+tldr: "Bi-LSTM tagger trained on general-domain NER and transferred to biomedical text (BC5CDR): entity-level F1 54.8%."
+excerpt: "Bi-LSTM NER transferred from general to biomedical text (BC5CDR)."
+links:
+  - label: "Code"
+    url: "https://github.com/sudo-YashBhardwaj/Named-Entity-Recognition"
 ---
 
-A production-ready Named Entity Recognition system using bidirectional LSTM architecture, demonstrating strong performance across general and domain-specific tasks.
+**Problem.** Entity taggers trained on news text degrade on biomedical language, where labeled data is scarce.
 
-**Innovation Highlights:** (1) Bi-LSTM architecture with spatial dropout and time-distributed output achieving 98% accuracy on standard NER, (2) Transfer learning pipeline fine-tuning on BC5CDR biomedical dataset achieving entity F1: 54.81% and weighted F1: 70.74%, (3) Domain adaptation techniques for robust transfer from general to biomedical text.
+**Approach.** A bidirectional LSTM tagger (spatial dropout, time-distributed output) in TensorFlow/Keras, trained on general-domain NER and fine-tuned on the BC5CDR chemical/disease corpus.
 
-**Technical Excellence:** Data preprocessing pipelines, custom evaluation metrics (F1, precision, recall), and training infrastructure with early stopping and loss visualization.
-
-**Engineering Best Practices:** Built with TensorFlow 2.0+, Keras, and production-ready code with configurable hyperparameters. Demonstrates expertise in sequence modeling, transfer learning, domain adaptation, and NLP pipelines.
-
-**[GitHub](https://github.com/sudo-YashBhardwaj/Named-Entity-Recognition)**
-
+**Result.** 98% token-level accuracy in-domain (dominated by the non-entity class); on BC5CDR, entity-level F1 of 54.8% (weighted F1 70.7%).

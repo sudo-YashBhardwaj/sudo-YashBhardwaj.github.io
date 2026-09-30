@@ -1,0 +1,29 @@
+{% comment %}
+  One paper or project as a card (the original site's .publication-card).
+  include.item : a document from _publications or _portfolio.
+  Reads front matter: title, url, teaser, teaser_alt, card_venue, card_year,
+  authors (papers), summary, links [{label, url}].
+{% endcomment %}
+{% include base_path %}
+{% assign item = include.item %}
+{% capture item_url %}{{ base_path }}{{ item.url }}{% endcapture %}
+<article class="publication-card">
+  {% if item.teaser %}
+  <a class="publication-media" href="{{ item_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ base_path }}/images/{{ item.teaser }}" alt="" loading="lazy">
+  </a>
+  {% endif %}
+  <div class="publication-body">
+    <div class="publication-meta">
+      {% if item.card_venue %}<span class="venue">{{ item.card_venue }}</span>{% endif %}
+      {% if item.card_year %}<span class="year">{{ item.card_year }}</span>{% endif %}
+    </div>
+    <h3><a href="{{ item_url }}">{{ item.title }}</a></h3>
+    {% if item.authors %}<p>{{ item.authors | replace: site.author.name, "<strong>Yash Bhardwaj</strong>" }}</p>{% endif %}
+    {% if item.summary %}<p class="pub-summary">{{ item.summary }}</p>{% endif %}
+    <p class="pub-links">
+      <a href="{{ item_url }}">Project Page</a>
+      {% for l in item.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}
+    </p>
+  </div>
+</article>

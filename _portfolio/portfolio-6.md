@@ -1,15 +1,25 @@
 ---
-title: "Bias Detection and Mitigation Framework"
-excerpt: "Comprehensive ML fairness framework detecting and mitigating gender bias in loan approval models using IBM AIF360, implementing multiple fairness metrics and preprocessing mitigation techniques with measurable equity improvements.<br/><img src='/images/bias_mitigation.png' width='600'>"
+title: "Measuring and mitigating bias in a loan-approval model"
 collection: portfolio
+published: false # not listed on the site (dropped from the CV too); set to true to restore
+card_venue: "Coursework"
+summary: "A gender-bias audit of a loan-approval classifier with IBM AIF360, comparing reweighing and disparate-impact removal."
+permalink: /projects/bias-mitigation/
+redirect_from:
+  - /portfolio/portfolio-6/
+group: earlier
+order: 21
+teaser: "work/bias.jpg"
+teaser_alt: "AI fairness illustration"
+tldr: "Audited a loan-approval classifier for gender bias with IBM AIF360 (disparate impact, statistical parity, equalized odds) and compared pre-processing mitigations (reweighing, disparate-impact remover)."
+excerpt: "Gender-bias audit and mitigation of a loan-approval classifier with IBM AIF360."
+links:
+  - label: "Code"
+    url: "https://github.com/sudo-YashBhardwaj/bias-detection-and-mitigation"
 ---
 
-A comprehensive framework for detecting and mitigating bias in machine learning models, focusing on gender bias in loan approval predictions.
+**Problem.** A classifier can be accurate overall while treating protected groups unequally; the right fairness metric and mitigation depend on the setting.
 
-**Innovation Highlights:** (1) Multi-metric bias detection using IBM AIF360 (Disparate Impact, Statistical Parity Difference, Equalized Odds), (2) Preprocessing mitigation pipeline with Reweighting and Disparate Impact Remover techniques, (3) Quantitative evaluation framework measuring fairness improvements and performance trade-offs.
+**Approach.** Measured gender bias in a loan-approval model with IBM AIF360 (disparate impact, statistical parity difference and equalized odds), then applied pre-processing mitigations (reweighing, disparate-impact remover) and compared fairness against accuracy.
 
-**Technical Excellence:** End-to-end workflow from detection to mitigation, systematic comparison of fairness metrics, and statistical analysis across protected groups.
-
-**Engineering Best Practices:** Built with Python, scikit-learn, and IBM AIF360 with modular architecture. Demonstrates expertise in responsible AI, algorithmic fairness, and ethical machine learning. Results show significant equity improvements while maintaining predictive accuracy.
-
-**[GitHub](https://github.com/sudo-YashBhardwaj/bias-detection-and-mitigation)**
+{% include todo.html text="Add the before/after disparate-impact and accuracy numbers, or leave this project off the site." %}

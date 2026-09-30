@@ -1,0 +1,244 @@
+---
+layout: base
+permalink: /
+description: "Yash Bhardwaj: MSc student in AI at École Polytechnique, former research intern in the Willow team at Inria Paris. Reinforcement learning, robot learning, 3D perception, diffusion and multimodal LLMs. Papers at KDD 2025 (oral) and an ICCV 2025 workshop."
+redirect_from:
+  - /about/
+  - /about.html
+  - /portfolio/portfolio-3/
+  - /portfolio/portfolio-5/
+  - /portfolio/portfolio-6/
+---
+{% include base_path %}
+      <section class="hero" id="about">
+        <div class="hero-copy">
+          <h1>Yash Bhardwaj</h1>
+          <div class="hero-summary">
+            <p class="hero-lead">
+              I am a master's student in AI at <a href="https://www.polytechnique.edu/en">École Polytechnique</a>,
+              interested in robot learning, 3D perception, diffusion and flow matching, and multimodal LLMs. Most
+              recently I was a research intern at <a href="https://www.inria.fr/">Inria Paris</a> in the
+              <a href="https://www.di.ens.fr/willow/">Willow</a> team, with
+              <a href="https://cordeliaschmid.github.io/">Cordelia Schmid</a> and
+              <a href="https://cshizhe.github.io/">Shizhe Chen</a>, on pretraining 3D representations for
+              vision-language-action models and downstream manipulation. Before that I worked with
+              <a href="https://fintech.gatech.edu/">Georgia Tech</a> on multimodal AI for finance and co-authored
+              two papers in the area, at <strong>KDD 2025 (oral)</strong> and an <strong>ICCV 2025 workshop</strong>.
+              I came to research after three and a half years as a software engineer at Urban Company.
+            </p>
+            <p class="hero-lead">
+              <strong>Looking for research internships from April 2027</strong> in reinforcement learning and robot
+              learning, multimodal learning, diffusion and flow matching, and LLM and VLM pre- and post-training.
+            </p>
+          </div>
+
+          <div class="hero-links">
+            <a class="button" href="mailto:{{ site.author.email }}">Email</a>
+            <a class="button" href="{{ site.author.cv | prepend: base_path }}">CV</a>
+            <a class="button" href="{{ site.author.googlescholar }}">Google Scholar</a>
+            <a class="button" href="https://github.com/{{ site.author.github }}">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+          </div>
+
+          <div class="hero-facts hero-facts-inline">
+            <div class="fact-block fact-block-affiliation">
+              <span class="fact-label">Affiliation</span>
+              <strong>École Polytechnique, IP Paris</strong>
+            </div>
+            <div class="fact-block fact-block-focus">
+              <span class="fact-label">Research</span>
+              <strong>Reinforcement Learning, Robot Learning, 3D Perception, World Models, Diffusion and Flow Matching, Multimodal LLMs</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="portrait-card">
+            <img src="{{ base_path }}/images/profile-640.jpg" alt="Portrait of Yash Bhardwaj">
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="publications">
+        <div class="section-heading">
+          <span class="section-kicker">Selected Research</span>
+          <h2>Publications</h2>
+        </div>
+
+        <div class="publication-grid">
+          {% assign pubs = site.publications | where: "featured", true | sort: "order" %}
+          {% for p in pubs %}{% include card.html item=p %}{% endfor %}
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <span class="section-kicker">Selected Work</span>
+          <h2>Projects</h2>
+        </div>
+
+        {% comment %} Order comes from `order` in each _portfolio/*.md; `published: false` hides a project. {% endcomment %}
+        <div class="publication-grid">
+          {% assign projects = site.portfolio | sort: "order" %}
+          {% for p in projects %}{% include card.html item=p %}{% endfor %}
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <span class="section-kicker">Academic Record</span>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-column">
+            <div class="panel">
+              <h3>Research Experience</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong><a href="https://www.inria.fr/">Inria Paris</a>, <a href="https://www.di.ens.fr/willow/">Willow team</a></strong>
+                    <span class="cv-date">Apr 2026-Sep 2026</span>
+                  </div>
+                  <span class="cv-detail">Research Intern, advised by <a href="https://cordeliaschmid.github.io/">Cordelia Schmid</a> and <a href="https://cshizhe.github.io/">Shizhe Chen</a></span>
+                  <ul class="bullet-list">
+                    <li>Pretrained a Point Transformer V3 encoder with a query-based mask decoder on simulator-rendered scenes, so that each object token carries an instance mask, class, part-whole relation, articulation and cross-scene identity.</li>
+                    <li>Plugged the tokens into 3D vision-language-action policies in place of dense point features, and benchmarked encoder-policy combinations on RLBench and RoboCasa.</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong><a href="https://www.gatech.edu/">Georgia Tech</a>, <a href="https://fintech.gatech.edu/">Financial Services Innovation Lab</a></strong>
+                    <span class="cv-date">May 2024-Sep 2025</span>
+                  </div>
+                  <span class="cv-detail">Research Intern</span>
+                  <ul class="bullet-list">
+                    <li><a href="{{ base_path }}/publication/videoconviction/">VideoConviction</a> (KDD 2025, oral): a benchmark of how well LLMs and video MLLMs read a speaker's conviction in stock recommendations: 288 finfluencer videos, 6,000+ expert annotations (457 hours).</li>
+                    <li><a href="{{ base_path }}/publication/fincap/">FinCap</a> (ICCV 2025 workshop): a benchmark for topic-aligned caption generation on financial short videos: 624 clips, 5 topics, all 7 transcript, audio and video combinations across 5 multimodal LLMs.</li>
+                  </ul>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong><a href="https://iiitd.ac.in/">IIIT-Delhi</a>, MIDAS Lab</strong>
+                    <span class="cv-date">Jan 2021-Jun 2021</span>
+                  </div>
+                  <span class="cv-detail">Research Intern</span>
+                  <ul class="bullet-list">
+                    <li>Author profiling on the S2ORC corpus (600K papers, 160K authors) with graph neural networks (GNN-XML) and AnnexML.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-column">
+            <div class="panel education-panel">
+              <h3>Education</h3>
+              <ul class="cv-list education-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>MSc&amp;T in Trustworthy and Responsible AI</strong>
+                    <span class="cv-date">2025-present</span>
+                  </div>
+                  <span class="cv-detail"><a href="https://www.polytechnique.edu/">École Polytechnique</a>, IP Paris. <a href="https://www.inde.campusfrance.org/charpak-master-s-scholarship">Charpak Master's Scholarship</a></span>
+                  <em class="cv-note">Coursework: Machine Learning, Deep Learning, Computer Vision, Reinforcement Learning, Multimodal Generative AI</em>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong>B.E. in Computer Science</strong>
+                    <span class="cv-date">2017-2021</span>
+                  </div>
+                  <span class="cv-detail"><a href="https://www.bits-pilani.ac.in/">Birla Institute of Technology and Science (BITS), Pilani</a></span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Industry</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong><a href="https://medium.com/uc-engineering">Urban Company</a></strong>
+                    <span class="cv-date">Aug 2021-Mar 2025</span>
+                  </div>
+                  <span class="cv-detail">Software Developer 2, Bangalore. Promoted in 2023</span>
+                  <ul class="bullet-list">
+                    <li>Built dynamic platform fees on the checkout flow: over $6M a month in additional revenue.</li>
+                    <li>Designed a distributed product-catalog cache (Kafka, Redis, MongoDB) for 27K products across 5 countries: 40% lower service latency, feeding the recommendation pipelines.</li>
+                    <li>Deployed SARIMA and XGBoost dynamic pricing by demand and region: +4% revenue on $80M+ of transactions.</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Teaching</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Teaching Assistant</strong>
+                  </div>
+                  <span class="cv-detail"><a href="https://www.bits-pilani.ac.in/">BITS Pilani</a></span>
+                  <ul class="module-list">
+                    <li>Data Structures and Algorithms</li>
+                    <li>Database Systems</li>
+                    <li>Computer Programming</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel skills-panel">
+          <h3>Skills</h3>
+          <ul class="cv-list service-list">
+            <li>
+              <strong>Tools</strong>
+              <span>Python, C++, PyTorch, Hugging Face (Transformers, Diffusers, PEFT, Accelerate), distributed multi-GPU training on SLURM clusters, MuJoCo, RLBench</span>
+            </li>
+            <li>
+              <strong>LLM and VLM post-training</strong>
+              <span>Supervised fine-tuning, LoRA and QLoRA; RL and preference optimization (PPO, GRPO, RLOO, DPO)</span>
+            </li>
+            <li>
+              <strong>Robot learning</strong>
+              <span>Vision-language-action policies, imitation learning, 3D representation learning on point clouds, world models and planning (CEM, MPC)</span>
+            </li>
+            <li>
+              <strong>Generative and multimodal</strong>
+              <span>Diffusion models (distillation, classifier guidance), CLIP-style contrastive learning, multimodal LLMs</span>
+            </li>
+            <li>
+              <strong>Evaluation and data</strong>
+              <span>LLM-as-judge benchmarks, simulator-rendered and VLM auto-labelled datasets, pre-registered experiments</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="section-heading">
+          <span class="section-kicker">Recognition</span>
+          <h2>Awards</h2>
+        </div>
+
+        <div class="panel awards-panel">
+          <ul class="award-list">
+            <li>
+              <span class="award-year">2025</span>
+              <div class="award-detail">
+                <strong><a href="https://www.inde.campusfrance.org/charpak-master-s-scholarship">Charpak Master's Scholarship</a></strong>
+                <span>French Ministry for Europe and Foreign Affairs: 56 selected from 2,500+ applicants</span>
+              </div>
+            </li>
+            <li>
+              <span class="award-year">2022</span>
+              <div class="award-detail">
+                <strong><a href="https://www.codechef.com/users/glitch201">CodeChef Long Challenge: world rank 4 and 6</a></strong>
+                <span>September and October 2022, 10,000+ participants</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
