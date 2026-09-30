@@ -25,6 +25,8 @@ links:
     url: "https://huggingface.co/spaces/gtfintechlab/VideoConvictionLeaderboard"
   - label: "Talk"
     url: "https://youtu.be/A8TD6Oage4E"
+  - label: "Reddit thread"
+    url: "https://www.reddit.com/r/dataisbeautiful/comments/1m3okpb/backtesting_youtube_finfluencer_stock_picks_vs_sp/"
 ---
 
 <figure>

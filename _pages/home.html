@@ -20,8 +20,10 @@ redirect_from:
               <a href="https://www.polytechnique.edu/en">École Polytechnique</a>. From April to September 2026
               I was a research intern in the <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris,
               advised by <a href="https://cordeliaschmid.github.io/">Cordelia Schmid</a> and
-              <a href="https://cshizhe.github.io/">Shizhe Chen</a>, training object-centric 3D point-cloud encoders
-              and integrating them into vision-language-action policies for robot manipulation. Before that, at
+              <a href="https://cshizhe.github.io/">Shizhe Chen</a>, pretraining an object-centric 3D encoder
+              that turns a fused point cloud into a fixed set of object tokens, each grounded by an instance mask
+              and carrying the object's class, part structure and articulation, and plugging those tokens into
+              vision-language-action manipulation policies in place of dense point features. Before that, at
               Georgia Tech's <a href="https://qcf.gatech.edu/partner">Financial Services Innovation Lab</a>, I
               co-authored two benchmarks of what multimodal LLMs understand in video, at KDD 2025 (oral) and an
               ICCV 2025 workshop. I came to research from engineering: three and a half years as a software
@@ -131,7 +133,8 @@ redirect_from:
                     <span class="cv-date">Apr 2026-Sep 2026</span>
                   </div>
                   <span class="cv-detail">Willow team, Inria Paris. Advised by Cordelia Schmid and Shizhe Chen</span>
-                  <em class="cv-note">Object-centric 3D point-cloud encoders (Point Transformer backbones, query-based mask decoder) for instance and semantic segmentation, integrated into 3D vision-language-action policies and benchmarked on RLBench and GemBench (16 tasks)</em>
+                  <em class="cv-note">Pretrained a Point Transformer V3 encoder with a query-based mask decoder on simulator-rendered scenes, so that each object token carries an instance mask, semantic class, part-whole relation, articulation and cross-scene identity</em>
+                  <em class="cv-note">Integrated the tokens into 3D vision-language-action policies as a drop-in replacement for dense point features, and benchmarked encoder-policy combinations on RLBench and GemBench (16 tasks) in a controlled study that separates the effect of pretraining from that of the object-centric interface</em>
                 </li>
                 <li>
                   <div class="cv-item-head">
