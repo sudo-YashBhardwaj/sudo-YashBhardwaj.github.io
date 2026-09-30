@@ -1,6 +1,7 @@
 ---
 title: "Real-time multimodal emotion recognition"
 collection: portfolio
+published: false # not listed on the site (dropped from the CV too); set to true to restore
 card_venue: "Independent Project"
 card_year: "2025"
 summary: "Real-time late fusion of face, speech and text emotion signals at 100–300 ms per frame."

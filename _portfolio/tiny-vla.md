@@ -1,35 +1,39 @@
 ---
 title: "Tiny-VLA: grounded dig-target guidance for wheel loaders"
 collection: portfolio
+permalink: /projects/tiny-vla/
+order: 2 # position on the homepage
 card_venue: "Independent Project"
 card_year: "2026"
-summary: "Qwen3-VL-2B fine-tuned with LoRA on 848 auto-labelled frames to give a wheel loader its next dig target: a bounding box, a spatial instruction and an action token, on one consumer GPU."
-permalink: /projects/tiny-vla/
-group: embodied
-order: 2
-year_label: "2026 · independent project"
+summary: "Fine-tuned Qwen3-VL-2B with LoRA on a 4-bit base (17M trainable parameters, 0.8%) to tell a wheel loader where to dig: a target bounding box, its spatial position and a discrete action. Trained on 848 frames labelled automatically by a Florence-2 data engine, in about 10 GB of GPU memory."
 teaser: "work/tiny-vla.jpg"
-teaser_alt: "Wheel-loader camera frame with the predicted target pile boxed and the model's instruction overlaid"
-tldr: "Fine-tuned Qwen3-VL-2B (LoRA, 4-bit) on 848 auto-labeled frames to point a wheel loader at its next dig target (a bounding box, a spatial instruction and a discrete action token), on a single consumer GPU."
-excerpt: "Qwen3-VL-2B fine-tuned with LoRA on auto-labeled wheel-loader frames to output a dig-target box, a spatial instruction and an action token."
+teaser_alt: "Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid"
 links:
   - label: "Code"
     url: "https://github.com/sudo-YashBhardwaj/tiny-VLA"
 ---
 
 <figure>
-  <img src="/images/work/tiny-vla.jpg" alt="Wheel-loader camera frame with the predicted target pile boxed and the model's instruction overlaid" loading="lazy">
-  <figcaption>Model output on a wheel-loader camera frame. Q: “Where should I dig?” A: “Dig the dirt pile on the center, far at coordinates [618, 231, 1127, 479]. &lt;ACTION_APPROACH&gt;”</figcaption>
+  <img src="/images/work/tiny-vla.jpg" alt="Wheel-loader camera frame with the predicted dig target boxed and the model's instruction overlaid" loading="lazy">
+  <figcaption>Model output on a wheel-loader camera frame. Q: "Where should I dig?" A: "Dig the dirt pile on the center, far at coordinates [618, 231, 1127, 479]. &lt;ACTION_APPROACH&gt;"</figcaption>
 </figure>
 
-**Problem.** Autonomous earth-moving machines must decide *where* to act from a forward camera. General-purpose VLMs describe such scenes but do not return a grounded, actionable target in a form a controller can consume.
+**The problem.** An autonomous wheel loader has to decide where to dig from its forward camera. General-purpose vision-language models can describe a quarry, but they do not return a grounded target that a controller can act on.
 
-**Approach.**
-- *Data engine.* Frames are extracted from operator videos and labeled automatically with Florence-2-large-ft (phrase grounding, captioning, VQA), producing 848 LLaVA-style conversations with bounding boxes `[x1, y1, x2, y2]`, spatial context (left / center / right, ahead / far) and action tags.
-- *Model.* Qwen3-VL-2B-Instruct fine-tuned with LoRA (r = 16, α = 32) on a 4-bit NF4 base: ~17M trainable parameters (0.8%). Training fits in ~10 GB of VRAM, inference in ~6 GB.
+## Approach
 
-**Result.** The model returns a target box, a spatial instruction and a discrete action token per frame (figure above), learned from under a thousand auto-labeled examples.
+- **Data engine.** Frames are sampled from operator videos and labelled automatically with Florence-2-large-ft (phrase grounding, captioning and VQA), giving 848 LLaVA-style conversations. Each answer carries the target box `[x1, y1, x2, y2]`, its position (left, center or right; ahead or far) and an action tag such as `<ACTION_APPROACH>`.
+- **Model.** Qwen3-VL-2B-Instruct fine-tuned with LoRA (rank 16, α = 32) on a 4-bit NF4 base: 17M trainable parameters, 0.8% of the model. Two epochs, effective batch size 16, learning rate 2e-4, FP16 with gradient checkpointing.
+- **Footprint.** Training fits in about 10 GB of GPU memory and inference in about 6 GB, so the whole pipeline runs on one consumer GPU.
 
-{% include todo.html text="Add a quantitative result on held-out frames (e.g. box IoU / grounding accuracy vs. zero-shot Qwen3-VL-2B and vs. Florence-2 itself). One number here is worth more than the whole section." %}
+## What it does
 
-**Limitations and next steps.** Single-frame reasoning with no temporal context or depth; labels inherit Florence-2's errors; data has geographic and weather bias (no snow). Natural extensions: multi-frame input, depth or LiDAR, and closing the loop with a controller, i.e. turning guidance into actions.
+Asked "Where should I dig?", the model returns a target box, a spatial instruction and a discrete action (figure above), learned from under a thousand automatically labelled frames.
+
+{% include todo.html text="Add one held-out number, e.g. box IoU or grounding accuracy against zero-shot Qwen3-VL-2B." %}
+
+## Limitations and next steps
+
+- Single-frame reasoning, with no temporal context and no depth.
+- Labels inherit Florence-2's errors, and the footage has geographic and weather bias (no snow).
+- Next: multi-frame input, depth or LiDAR, and closing the loop with a controller so that guidance becomes action.

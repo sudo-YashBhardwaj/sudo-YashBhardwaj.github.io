@@ -1,18 +1,6 @@
 ---
-layout: base
-title: "Publications"
+# Every publication is on the homepage; this address forwards there.
 permalink: /publications/
-description: "Publications by Yash Bhardwaj on multimodal video understanding: VideoConviction (KDD 2025, oral) and FinCap (ICCV 2025 workshop)."
+redirect_to: /#publications
+sitemap: false
 ---
-{% include base_path %}
-      <section class="section" id="publications">
-        <div class="section-heading">
-          <span class="section-kicker">All Research</span>
-          <h2>Publications</h2>
-          <p class="publication-legend"><sup>*</sup> Equal contribution. Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
-        </div>
-        <div class="publication-grid">
-          {% assign pubs = site.publications | sort: "order" %}
-          {% for p in pubs %}{% include card.html item=p %}{% endfor %}
-        </div>
-      </section>

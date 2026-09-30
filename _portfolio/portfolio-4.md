@@ -1,29 +1,33 @@
 ---
-title: "MedCLIP-Mini: a compact CLIP for radiology image–text retrieval"
+title: "MedCLIP-Mini: a compact CLIP for radiology image-text retrieval"
 collection: portfolio
-card_venue: "Independent Project"
-card_year: "2025"
-summary: "A 50M-parameter CLIP-style dual encoder for radiology image–text retrieval on ROCO: R@1 0.28 and R@10 0.55 with a FAISS index."
 permalink: /projects/medclip-mini/
 redirect_from:
   - /portfolio/portfolio-4/
-group: generative
-order: 13
-year_label: "2025 · independent project"
+order: 6 # position on the homepage
+card_venue: "Independent Project"
+card_year: "2025"
+summary: "A CLIP-style dual encoder (ResNet-18 for images, DistilBERT for text) trained with a symmetric InfoNCE loss on ROCO radiology image-caption pairs, reaching 28% Recall@1 and 55% Recall@10 on image-text retrieval, served through a FAISS index."
 teaser: "work/medclip.jpg"
-teaser_fit: contain
-teaser_alt: "CLIP contrastive pre-training diagram"
-tldr: "CLIP-style dual encoder (ResNet-18 + DistilBERT, ~50M parameters, ~8× smaller than CLIP ViT-L) trained with InfoNCE on ROCO image–caption pairs; R@1 0.28 / R@10 0.55 image–text retrieval with a FAISS index."
-excerpt: "Compact CLIP-style model for medical image-text retrieval on ROCO; R@1 0.28, R@10 0.55."
+teaser_alt: "Contrastive image-text training: matching pairs on the diagonal of the similarity matrix"
 links:
   - label: "Code"
     url: "https://github.com/sudo-YashBhardwaj/MedClip-Mini"
 ---
 
-**Problem.** Medical image–text retrieval is useful for search and report drafting, but full-size CLIP models are expensive to train and deploy, and general-domain CLIP transfers poorly to radiology.
+<figure>
+  <img src="/images/work/medclip.jpg" alt="Contrastive image-text training: matching pairs on the diagonal of the similarity matrix" loading="lazy">
+  <figcaption>Contrastive image-text training. Figure from CLIP (Radford et al., 2021).</figcaption>
+</figure>
 
-**Approach.** A dual encoder (ResNet-18 for images, DistilBERT for captions) trained from pretrained backbones with a symmetric InfoNCE contrastive loss on ROCO radiology image–caption pairs. Embeddings are indexed with FAISS for sub-second search; runs on CUDA, Apple MPS or CPU.
+**The problem.** Retrieving the right radiology report for an image, or the right image for a description, helps search and report drafting. Full-size CLIP models are expensive to train and deploy, and general-domain CLIP transfers poorly to medical images.
 
-**Result.** Recall@1 = 0.28 and Recall@10 = 0.55 on image–text retrieval with ~50M parameters.
+## Approach
 
-{% include todo.html text="State the retrieval pool size (R@1 depends heavily on it) and a baseline (e.g. zero-shot OpenAI CLIP on the same split)." %}
+- **Model.** A dual encoder: ResNet-18 for images and DistilBERT for captions, each followed by a projection into a shared 256-d embedding space.
+- **Training.** Symmetric InfoNCE loss (temperature 0.07) on ROCO radiology image-caption pairs, starting from pretrained backbones.
+- **Retrieval.** Embeddings indexed with FAISS for fast text-to-image and image-to-text search; runs on CUDA, Apple MPS or CPU.
+
+## Results
+
+**28% Recall@1 and 55% Recall@10** on image-text retrieval, with zero-shot classification by comparing an image against text prompts.

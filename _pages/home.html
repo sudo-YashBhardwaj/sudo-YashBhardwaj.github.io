@@ -1,11 +1,14 @@
 ---
 layout: base
 permalink: /
-seo_title: "Yash Bhardwaj · 3D representation learning, VLAs and embodied AI"
-description: "Yash Bhardwaj is an ML researcher (École Polytechnique, Inria Willow) working on 3D representation learning, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
+seo_title: "Yash Bhardwaj · 3D perception, robot learning and multimodal LLMs"
+description: "Yash Bhardwaj is an MSc student in AI at École Polytechnique and a former research intern in the Willow team at Inria Paris, working on 3D perception, robot learning and multimodal LLMs. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
 redirect_from:
   - /about/
   - /about.html
+  - /portfolio/portfolio-3/
+  - /portfolio/portfolio-5/
+  - /portfolio/portfolio-6/
 ---
 {% include base_path %}
       <section class="hero" id="about">
@@ -14,18 +17,19 @@ redirect_from:
           <div class="hero-summary">
             <p class="hero-lead">
               I am a master's student in Trustworthy and Responsible AI at
-              <a href="https://www.polytechnique.edu/en">École Polytechnique</a>, working on multimodal and
-              3D representation learning for embodied AI. Over summer 2026 I was a research intern with the
-              <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris, pretraining an
-              object-centric 3D encoder for robot manipulation policies. Before that, at Georgia Tech's
-              <a href="https://qcf.gatech.edu/partner">Financial Services Innovation Lab</a>, I worked on what
-              multimodal LLMs actually understand in video, with papers at KDD 2025 (oral) and an ICCV 2025
-              workshop. I came to research from engineering: three and a half years as a software engineer at
-              Urban Company, building production data and ML systems.
+              <a href="https://www.polytechnique.edu/en">École Polytechnique</a>. From April to September 2026
+              I was a research intern in the <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris,
+              advised by <a href="https://cordeliaschmid.github.io/">Cordelia Schmid</a> and
+              <a href="https://cshizhe.github.io/">Shizhe Chen</a>, training object-centric 3D point-cloud encoders
+              and integrating them into vision-language-action policies for robot manipulation. Before that, at
+              Georgia Tech's <a href="https://qcf.gatech.edu/partner">Financial Services Innovation Lab</a>, I
+              co-authored two benchmarks of what multimodal LLMs understand in video, at KDD 2025 (oral) and an
+              ICCV 2025 workshop. I came to research from engineering: three and a half years as a software
+              engineer at Urban Company, building production data and ML systems.
             </p>
             <p class="hero-lead">
-              <strong>I am looking for research internships starting April 2027</strong> in embodied AI,
-              multimodal learning, diffusion and flow matching, and LLM pre- and post-training.
+              <strong>I am looking for research internships starting April 2027</strong> in robot learning and
+              embodied AI, multimodal learning, diffusion and flow matching, and LLM and VLM pre- and post-training.
             </p>
           </div>
 
@@ -44,7 +48,7 @@ redirect_from:
             </div>
             <div class="fact-block fact-block-focus">
               <span class="fact-label">Research</span>
-              <strong>3D Representation Learning, Vision-Language-Action Models, World Models, RL Post-Training</strong>
+              <strong>3D Perception, Robot Learning, World Models, Multimodal LLMs</strong>
             </div>
           </div>
         </div>
@@ -71,23 +75,14 @@ redirect_from:
 
       <section class="section" id="projects">
         <div class="section-heading">
-          <span class="section-kicker">Independent Research</span>
+          <span class="section-kicker">Selected Work</span>
           <h2>Projects</h2>
         </div>
 
-        {% assign projects = site.portfolio | sort: "order" %}
+        {% comment %} Order comes from `order` in each _portfolio/*.md; `published: false` hides a project. {% endcomment %}
         <div class="publication-grid">
-          {% for p in projects %}{% if p.featured %}{% include card.html item=p %}{% endif %}{% endfor %}
-        </div>
-
-        <div class="panel more-projects">
-          <h3>More projects</h3>
-          <ul class="plain-list">
-            {% for p in projects %}{% unless p.featured or p.group == "earlier" %}
-            <li><a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a>. <span>{{ p.summary }}</span></li>
-            {% endunless %}{% endfor %}
-          </ul>
-          <p class="section-more"><a href="{{ base_path }}/projects/">All projects</a><span class="section-more-sep">&middot;</span><a href="https://github.com/{{ site.author.github }}">GitHub</a></p>
+          {% assign projects = site.portfolio | sort: "order" %}
+          {% for p in projects %}{% include card.html item=p %}{% endfor %}
         </div>
       </section>
 
@@ -109,13 +104,20 @@ redirect_from:
                   </div>
                   <span class="cv-detail">École Polytechnique, IP Paris</span>
                   <em class="cv-note">Charpak Master's Scholarship</em>
+                  <ul class="module-list">
+                    <li>Machine Learning</li>
+                    <li>Deep Learning</li>
+                    <li>Computer Vision</li>
+                    <li>Reinforcement Learning</li>
+                    <li>Collaborative Learning</li>
+                  </ul>
                 </li>
                 <li>
                   <div class="cv-item-head">
                     <strong>B.E. in Computer Science</strong>
                     <span class="cv-date">2017-2021</span>
                   </div>
-                  <span class="cv-detail">Birla Institute of Technology and Science, Pilani</span>
+                  <span class="cv-detail">Birla Institute of Technology and Science (BITS), Pilani</span>
                 </li>
               </ul>
             </div>
@@ -126,26 +128,26 @@ redirect_from:
                 <li>
                   <div class="cv-item-head">
                     <strong>Research Intern</strong>
-                    <span class="cv-date">Summer 2026</span>
+                    <span class="cv-date">Apr 2026-Sep 2026</span>
                   </div>
-                  <span class="cv-detail">Willow team, Inria Paris</span>
-                  <em class="cv-note">Object-centric 3D representation learning for robot manipulation policies</em>
+                  <span class="cv-detail">Willow team, Inria Paris. Advised by Cordelia Schmid and Shizhe Chen</span>
+                  <em class="cv-note">Object-centric 3D point-cloud encoders (Point Transformer backbones, query-based mask decoder) for instance and semantic segmentation, integrated into 3D vision-language-action policies and benchmarked on RLBench and GemBench (16 tasks)</em>
                 </li>
                 <li>
                   <div class="cv-item-head">
                     <strong>Research Intern</strong>
-                    <span class="cv-date">2024-2025</span>
+                    <span class="cv-date">May 2024-Sep 2025</span>
                   </div>
-                  <span class="cv-detail">Financial Services Innovation Lab, Georgia Tech</span>
-                  <em class="cv-note">Multimodal video benchmarks: KDD 2025 (oral), ICCV 2025 workshop</em>
+                  <span class="cv-detail">Financial Services Innovation Lab, Georgia Tech (remote)</span>
+                  <em class="cv-note">VideoConviction (KDD 2025, oral) and FinCap (ICCV 2025 workshop): benchmarks of multimodal LLMs on financial video</em>
                 </li>
                 <li>
                   <div class="cv-item-head">
                     <strong>Research Intern</strong>
-                    <span class="cv-date">2021</span>
+                    <span class="cv-date">Jan 2021-Jun 2021</span>
                   </div>
                   <span class="cv-detail">MIDAS Lab, IIIT-Delhi</span>
-                  <em class="cv-note">Author profiling with graph neural networks on S2ORC (600K papers, 160K authors)</em>
+                  <em class="cv-note">Author profiling on S2ORC (600K papers, 160K authors) with graph neural networks and extreme multi-label classification</em>
                 </li>
               </ul>
             </div>
@@ -157,12 +159,12 @@ redirect_from:
               <ul class="cv-list">
                 <li>
                   <div class="cv-item-head">
-                    <strong>Software Developer II</strong>
-                    <span class="cv-date">2021-2025</span>
+                    <strong>Software Developer 2</strong>
+                    <span class="cv-date">Aug 2021-Mar 2025</span>
                   </div>
-                  <span class="cv-detail">Urban Company</span>
-                  <em class="cv-note">Distributed product-catalog cache (Kafka, Redis, MongoDB) serving 27K products in 5 countries, 40% lower latency</em>
-                  <em class="cv-note">Demand-aware pricing models: +4% revenue on $80M+ of transactions</em>
+                  <span class="cv-detail">Urban Company, Bangalore. Promoted in 2023</span>
+                  <em class="cv-note">Designed a distributed product-catalog cache (Kafka, Redis, MongoDB) for 27K products across 5 countries: 40% lower service latency, feeding the recommendation pipelines</em>
+                  <em class="cv-note">Deployed demand- and region-aware dynamic pricing (SARIMA, XGBoost): +4% revenue on $80M+ of transactions</em>
                 </li>
               </ul>
             </div>
@@ -171,7 +173,7 @@ redirect_from:
               <h3>Professional Skills</h3>
               <ul class="cv-list skills-list">
                 <li>
-                  <span class="skills-line">Python, PyTorch, Hugging Face, Docker, AWS, Kafka, Redis, MongoDB, Elasticsearch, Snowflake</span>
+                  <span class="skills-line">Python, C++, PyTorch, Hugging Face, scikit-learn, NumPy, Pandas, Docker, Git, Linux, AWS, Kafka, Redis, MongoDB, MySQL, Snowflake</span>
                 </li>
               </ul>
             </div>
@@ -190,18 +192,18 @@ redirect_from:
             <li>
               <span class="award-year">2025</span>
               <div class="award-detail">
-                <strong>Charpak Master's Scholarship</strong>
-                <span>56 scholars selected from 2,500+ applicants</span>
+                <strong><a href="https://www.inde.campusfrance.org/charpak-master-s-scholarship">Charpak Master's Scholarship</a></strong>
+                <span>French Ministry for Europe and Foreign Affairs: 56 selected from 2,500+ applicants</span>
               </div>
             </li>
             <li>
               <span class="award-year">2022</span>
               <div class="award-detail">
-                <strong>CodeChef Long Challenge, world rank 4 and 6</strong>
+                <strong><a href="https://www.codechef.com/users/glitch201">CodeChef Long Challenge: world rank 4 and 6</a></strong>
                 <span>September and October 2022, 10,000+ participants</span>
               </div>
             </li>
           </ul>
-          {% include todo.html text="Add any other awards from your CV (scholarships, department ranks, hackathons). Four or five entries read better than two." %}
+          {% include todo.html text="Add any other awards (scholarships, department ranks, hackathons). Four or five entries read better than two." %}
         </div>
       </section>

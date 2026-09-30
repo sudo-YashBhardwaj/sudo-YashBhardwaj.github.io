@@ -1,6 +1,7 @@
 ---
 title: "Named entity recognition: general to biomedical transfer"
 collection: portfolio
+published: false # not listed on the site (dropped from the CV too); set to true to restore
 card_venue: "Coursework"
 summary: "A Bi-LSTM tagger transferred from general-domain NER to biomedical text (BC5CDR), reaching entity-level F1 of 54.8%."
 permalink: /projects/named-entity-recognition/

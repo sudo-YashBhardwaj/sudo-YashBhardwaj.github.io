@@ -1,32 +1,6 @@
 ---
-layout: base
-title: "Projects"
+# Every project is on the homepage; this address forwards there.
 permalink: /projects/
-redirect_from:
-  - /portfolio/
-description: "Projects by Yash Bhardwaj: world-model repair, rollout allocation for RLOO, vision-language models for robot guidance, differentiable MPC, diffusion distillation and multimodal models."
+redirect_to: /#projects
+sitemap: false
 ---
-{% include base_path %}
-{% comment %} Grouping and order come from `group` and `order` in each _portfolio/*.md front matter. {% endcomment %}
-{% assign projects = site.portfolio | sort: "order" %}
-      <section class="section" id="projects">
-        <div class="section-heading">
-          <span class="section-kicker">All Projects</span>
-          <h2>Projects</h2>
-        </div>
-
-        <p class="listing-group">Reinforcement learning, robotics and control</p>
-        <div class="publication-grid">
-          {% for p in projects %}{% if p.group == "embodied" %}{% include card.html item=p %}{% endif %}{% endfor %}
-        </div>
-
-        <p class="listing-group">Generative and multimodal models</p>
-        <div class="publication-grid">
-          {% for p in projects %}{% if p.group == "generative" %}{% include card.html item=p %}{% endif %}{% endfor %}
-        </div>
-
-        <p class="listing-group">Coursework</p>
-        <div class="publication-grid">
-          {% for p in projects %}{% if p.group == "earlier" %}{% include card.html item=p %}{% endif %}{% endfor %}
-        </div>
-      </section>
