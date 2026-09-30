@@ -1062,6 +1062,11 @@ ul {
    Site-specific additions (not in the original stylesheet)
    ========================================================================== */
 
+/* Card figures: 5px inside the box at every width (the original used 10px, 12px on phones) */
+.publication-media {
+  padding: 5px;
+}
+
 /* Cards open their write-ups */
 a.publication-media:hover {
   outline: 1px solid var(--line-strong);
