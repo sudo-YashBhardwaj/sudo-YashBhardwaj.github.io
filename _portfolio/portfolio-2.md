@@ -1,11 +1,14 @@
 ---
 title: "Emotion-conditioned image generation with Stable Diffusion"
 collection: portfolio
+card_venue: "Independent Project"
+card_year: "2025"
+summary: "Three ways to steer Stable Diffusion toward one of eight emotions: LoRA emotion tokens, latent classifier guidance, and BLIP with EmotionCLIP conditioning."
 permalink: /projects/emotion-conditioned-diffusion/
 redirect_from:
   - /portfolio/portfolio-2/
 group: generative
-order: 4
+order: 12
 year_label: "2025 · independent project"
 teaser: "work/emotion-generation.jpg"
 teaser_alt: "Emotion-conditioned image generation overview"

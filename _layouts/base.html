@@ -1,0 +1,44 @@
+{% include base_path %}<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% include seo.html %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&amp;family=Source+Sans+3:wght@400;500;600;700&amp;display=swap"
+    rel="stylesheet"
+  >
+  <link href="{{ base_path }}/assets/css/site.css" rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/svg+xml" href="{{ base_path }}/images/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ base_path }}/images/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ base_path }}/images/apple-touch-icon-180x180.png">
+</head>
+<body>
+  {% if page.url == "/" %}{% assign nav = "" %}{% else %}{% assign nav = base_path | append: "/" %}{% endif %}
+  <div class="page-shell">
+    <header class="site-header">
+      <nav class="site-nav" aria-label="Primary">
+        <a href="{{ nav }}#about">About</a>
+        <a href="{{ nav }}#publications">Publications</a>
+        <a href="{{ nav }}#projects">Projects</a>
+        <a href="{{ nav }}#experience">Experience</a>
+        <a href="{{ nav }}#awards">Awards</a>
+      </nav>
+    </header>
+
+    <main id="top">
+{{ content }}
+    </main>
+
+    <footer class="site-footer" aria-label="Location and time zone">
+      <span class="footer-globe" aria-hidden="true">🌐</span>
+      <span>Paris, France</span>
+      <span class="footer-separator" aria-hidden="true">&middot;</span>
+      <span>Central European Time (CET, UTC+1 / UTC+2)</span>
+    </footer>
+  </div>
+</body>
+</html>

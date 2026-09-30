@@ -1,6 +1,8 @@
 ---
 title: "Measuring and mitigating bias in a loan-approval model"
 collection: portfolio
+card_venue: "Coursework"
+summary: "A gender-bias audit of a loan-approval classifier with IBM AIF360, comparing reweighing and disparate-impact removal."
 permalink: /projects/bias-mitigation/
 redirect_from:
   - /portfolio/portfolio-6/

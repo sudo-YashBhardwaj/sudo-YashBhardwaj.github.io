@@ -1,8 +1,12 @@
 ---
 title: "Branch or restart? Rollout allocation for RLOO fine-tuning of LLM agents"
 collection: portfolio
+card_venue: "Independent Research"
+card_year: "2026"
+summary: "Continuing a trajectory already seen is 43–62% cheaper per success, but 54–67% of those groups return identical rewards, which gives RLOO zero gradient. RLOO itself lifts Qwen3-1.7B on ALFWorld from 58.2% to 64.6% (p = 0.019)."
 permalink: /projects/branch-or-restart/
 group: embodied
+featured: true # full card on the homepage; other projects appear in its "More projects" list
 order: 1
 year_label: "2026 · independent research project"
 teaser: "work/branch-or-restart.svg"

@@ -1,0 +1,207 @@
+---
+layout: base
+permalink: /
+seo_title: "Yash Bhardwaj · 3D representation learning, VLAs and embodied AI"
+description: "Yash Bhardwaj is an ML researcher (École Polytechnique, Inria Willow) working on 3D representation learning, vision-language-action models and embodied AI. Publications at KDD 2025 (oral) and ICCV 2025 (workshop)."
+redirect_from:
+  - /about/
+  - /about.html
+---
+{% include base_path %}
+      <section class="hero" id="about">
+        <div class="hero-copy">
+          <h1>Yash Bhardwaj</h1>
+          <div class="hero-summary">
+            <p class="hero-lead">
+              I am a master's student in Trustworthy and Responsible AI at
+              <a href="https://www.polytechnique.edu/en">École Polytechnique</a>, working on multimodal and
+              3D representation learning for embodied AI. Over summer 2026 I was a research intern with the
+              <a href="https://www.di.ens.fr/willow/">Willow</a> team at Inria Paris, pretraining an
+              object-centric 3D encoder for robot manipulation policies. Before that, at Georgia Tech's
+              <a href="https://qcf.gatech.edu/partner">Financial Services Innovation Lab</a>, I worked on what
+              multimodal LLMs actually understand in video, with papers at KDD 2025 (oral) and an ICCV 2025
+              workshop. I came to research from engineering: three and a half years as a software engineer at
+              Urban Company, building production data and ML systems.
+            </p>
+            <p class="hero-lead">
+              <strong>I am looking for research internships starting April 2027</strong> in embodied AI,
+              multimodal learning, diffusion and flow matching, and LLM pre- and post-training.
+            </p>
+          </div>
+
+          <div class="hero-links">
+            <a class="button" href="mailto:{{ site.author.email }}">Email</a>
+            <a class="button" href="{{ site.author.cv | prepend: base_path }}">CV</a>
+            <a class="button" href="{{ site.author.googlescholar }}">Google Scholar</a>
+            <a class="button" href="https://github.com/{{ site.author.github }}">GitHub</a>
+            <a class="button" href="https://www.linkedin.com/in/{{ site.author.linkedin }}">LinkedIn</a>
+          </div>
+
+          <div class="hero-facts hero-facts-inline">
+            <div class="fact-block fact-block-affiliation">
+              <span class="fact-label">Affiliation</span>
+              <strong>École Polytechnique, IP Paris</strong>
+            </div>
+            <div class="fact-block fact-block-focus">
+              <span class="fact-label">Research</span>
+              <strong>3D Representation Learning, Vision-Language-Action Models, World Models, RL Post-Training</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-aside">
+          <div class="portrait-card">
+            <img src="{{ base_path }}/images/profile-640.jpg" alt="Portrait of Yash Bhardwaj">
+          </div>
+        </aside>
+      </section>
+
+      <section class="section" id="publications">
+        <div class="section-heading">
+          <span class="section-kicker">Selected Research</span>
+          <h2>Publications</h2>
+          <p class="publication-legend"><sup>*</sup> Equal contribution.</p>
+        </div>
+
+        <div class="publication-grid">
+          {% assign pubs = site.publications | where: "featured", true | sort: "order" %}
+          {% for p in pubs %}{% include card.html item=p %}{% endfor %}
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="section-heading">
+          <span class="section-kicker">Independent Research</span>
+          <h2>Projects</h2>
+        </div>
+
+        {% assign projects = site.portfolio | sort: "order" %}
+        <div class="publication-grid">
+          {% for p in projects %}{% if p.featured %}{% include card.html item=p %}{% endif %}{% endfor %}
+        </div>
+
+        <div class="panel more-projects">
+          <h3>More projects</h3>
+          <ul class="plain-list">
+            {% for p in projects %}{% unless p.featured or p.group == "earlier" %}
+            <li><a href="{{ base_path }}{{ p.url }}">{{ p.title }}</a>. <span>{{ p.summary }}</span></li>
+            {% endunless %}{% endfor %}
+          </ul>
+          <p class="section-more"><a href="{{ base_path }}/projects/">All projects</a><span class="section-more-sep">&middot;</span><a href="https://github.com/{{ site.author.github }}">GitHub</a></p>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="section-heading">
+          <span class="section-kicker">Academic Record</span>
+          <h2>Experience</h2>
+        </div>
+
+        <div class="experience-layout">
+          <div class="experience-column">
+            <div class="panel education-panel">
+              <h3>Education</h3>
+              <ul class="cv-list education-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>MSc&amp;T in Trustworthy and Responsible AI</strong>
+                    <span class="cv-date">2025-present</span>
+                  </div>
+                  <span class="cv-detail">École Polytechnique, IP Paris</span>
+                  <em class="cv-note">Charpak Master's Scholarship</em>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong>B.E. in Computer Science</strong>
+                    <span class="cv-date">2017-2021</span>
+                  </div>
+                  <span class="cv-detail">Birla Institute of Technology and Science, Pilani</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Research Experience</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Research Intern</strong>
+                    <span class="cv-date">Summer 2026</span>
+                  </div>
+                  <span class="cv-detail">Willow team, Inria Paris</span>
+                  <em class="cv-note">Object-centric 3D representation learning for robot manipulation policies</em>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Research Intern</strong>
+                    <span class="cv-date">2024-2025</span>
+                  </div>
+                  <span class="cv-detail">Financial Services Innovation Lab, Georgia Tech</span>
+                  <em class="cv-note">Multimodal video benchmarks: KDD 2025 (oral), ICCV 2025 workshop</em>
+                </li>
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Research Intern</strong>
+                    <span class="cv-date">2021</span>
+                  </div>
+                  <span class="cv-detail">MIDAS Lab, IIIT-Delhi</span>
+                  <em class="cv-note">Author profiling with graph neural networks on S2ORC (600K papers, 160K authors)</em>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="experience-column">
+            <div class="panel">
+              <h3>Industry</h3>
+              <ul class="cv-list">
+                <li>
+                  <div class="cv-item-head">
+                    <strong>Software Developer II</strong>
+                    <span class="cv-date">2021-2025</span>
+                  </div>
+                  <span class="cv-detail">Urban Company</span>
+                  <em class="cv-note">Distributed product-catalog cache (Kafka, Redis, MongoDB) serving 27K products in 5 countries, 40% lower latency</em>
+                  <em class="cv-note">Demand-aware pricing models: +4% revenue on $80M+ of transactions</em>
+                </li>
+              </ul>
+            </div>
+
+            <div class="panel">
+              <h3>Professional Skills</h3>
+              <ul class="cv-list skills-list">
+                <li>
+                  <span class="skills-line">Python, PyTorch, Hugging Face, Docker, AWS, Kafka, Redis, MongoDB, Elasticsearch, Snowflake</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="awards">
+        <div class="section-heading">
+          <span class="section-kicker">Recognition</span>
+          <h2>Awards</h2>
+        </div>
+
+        <div class="panel awards-panel">
+          <ul class="award-list">
+            <li>
+              <span class="award-year">2025</span>
+              <div class="award-detail">
+                <strong>Charpak Master's Scholarship</strong>
+                <span>56 scholars selected from 2,500+ applicants</span>
+              </div>
+            </li>
+            <li>
+              <span class="award-year">2022</span>
+              <div class="award-detail">
+                <strong>CodeChef Long Challenge, world rank 4 and 6</strong>
+                <span>September and October 2022, 10,000+ participants</span>
+              </div>
+            </li>
+          </ul>
+          {% include todo.html text="Add any other awards from your CV (scholarships, department ranks, hackathons). Four or five entries read better than two." %}
+        </div>
+      </section>

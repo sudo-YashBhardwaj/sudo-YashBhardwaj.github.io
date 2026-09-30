@@ -1,6 +1,8 @@
 ---
 title: "Named entity recognition: general to biomedical transfer"
 collection: portfolio
+card_venue: "Coursework"
+summary: "A Bi-LSTM tagger transferred from general-domain NER to biomedical text (BC5CDR), reaching entity-level F1 of 54.8%."
 permalink: /projects/named-entity-recognition/
 redirect_from:
   - /portfolio/portfolio-5/

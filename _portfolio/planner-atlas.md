@@ -1,8 +1,12 @@
 ---
 title: "Planner Atlas: when a planner exploits a world model, which data repairs it?"
 collection: portfolio
+card_venue: "Independent Research"
+card_year: "2026"
+summary: "Repairing a latent world model on the planner's own data cut its top-choice regret by 14% against random data (pre-registered, 12 seeds, p = 0.0015), yet random data did more for closed-loop control, and held-out loss predicted neither."
 permalink: /projects/planner-atlas/
 group: embodied
+featured: true # full card on the homepage; other projects appear in its "More projects" list
 order: 0
 year_label: "2026 · independent research project"
 teaser: "work/planner-atlas.png"

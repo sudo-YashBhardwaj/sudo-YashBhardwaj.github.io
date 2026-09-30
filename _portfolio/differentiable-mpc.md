@@ -1,6 +1,9 @@
 ---
 title: "What does imitation identify? Differentiable MPC on the pendulum"
 collection: portfolio
+card_venue: "Course Project"
+card_year: "2026"
+summary: "Reproducing differentiable MPC on the pendulum: every seed imitates the expert and recovers the identifiable ratios g/l and 1/(ml²) within 2%, while g itself lands anywhere from 7 to 17."
 permalink: /projects/differentiable-mpc/
 group: embodied
 order: 3

@@ -1,11 +1,14 @@
 ---
 title: "Few-step text-to-image via LoRA diffusion distillation"
 collection: portfolio
+card_venue: "Reimplementation"
+card_year: "2025"
+summary: "A 4M-parameter LoRA student distilled from Stable Diffusion 1.5 samples in 2 to 8 steps, up to 18× faster than the 2.17 s baseline."
 permalink: /projects/diffusion-distillation/
 redirect_from:
   - /portfolio/portfolio-1/
 group: generative
-order: 3
+order: 11
 year_label: "2025 · reimplementation of Flash Diffusion (AAAI 2025)"
 teaser: "diffusion_distillation.png"
 teaser_fit: contain

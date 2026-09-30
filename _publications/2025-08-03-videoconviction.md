@@ -1,6 +1,9 @@
 ---
 title: "VideoConviction: A Multimodal Benchmark for Human Conviction and Stock Market Recommendations"
 collection: publications
+card_venue: "KDD Oral"
+card_year: "2025"
+summary: "An expert-annotated benchmark of 288 finfluencer videos with 6,000+ labels: multimodal LLMs extract tickers well, but confuse commentary with recommendations and misread conviction."
 category: conferences
 permalink: /publication/videoconviction/
 date: 2025-08-03

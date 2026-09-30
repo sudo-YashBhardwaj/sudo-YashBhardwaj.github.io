@@ -1,0 +1,22 @@
+---
+layout: base
+---
+{% include base_path %}
+{% if page.collection == "publications" %}{% assign back = "publications" %}{% assign kicker = "Publication" %}{% else %}{% assign back = "projects" %}{% assign kicker = "Project" %}{% endif %}
+<article class="article">
+  <p class="article-back"><a href="{{ base_path }}/#{{ back }}">&larr; Back to {{ back }}</a></p>
+  <span class="section-kicker">{{ kicker }}</span>
+  <h1>{{ page.title }}</h1>
+  {% if page.authors %}<p class="article-authors">{{ page.authors | replace: site.author.name, "<strong>Yash Bhardwaj</strong>" }}</p>{% endif %}
+  {% if page.venue %}<p class="article-venue">{{ page.venue }}</p>{% endif %}
+  {% if page.card_venue or page.card_year %}
+  <div class="publication-meta">
+    {% if page.card_venue %}<span class="venue">{{ page.card_venue }}</span>{% endif %}
+    {% if page.card_year %}<span class="year">{{ page.card_year }}</span>{% endif %}
+  </div>
+  {% endif %}
+  {% if page.links %}<p class="pub-links">{% for l in page.links %}<a href="{{ l.url }}">{{ l.label }}</a>{% endfor %}</p>{% endif %}
+  <div class="article-body">
+{{ content }}
+  </div>
+</article>

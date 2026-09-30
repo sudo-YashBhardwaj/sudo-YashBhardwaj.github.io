@@ -1,22 +1,18 @@
 ---
-layout: archive
+layout: base
 title: "Publications"
 permalink: /publications/
-author_profile: true
 description: "Publications by Yash Bhardwaj on multimodal video understanding: VideoConviction (KDD 2025, oral) and FinCap (ICCV 2025 workshop)."
 ---
-
 {% include base_path %}
-
-<p class="home-footnote">Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>. * denotes equal contribution.</p>
-
-{% assign pubs = site.publications | sort: "date" | reverse %}
-{% assign years = pubs | group_by_exp: "p", "p.date | date: '%Y'" %}
-{% for year in years %}
-  <h2 class="work-group">{{ year.name }}</h2>
-  {% comment %} Years newest first; within a year, strongest first via `order` front matter. {% endcomment %}
-  {% assign items = year.items | sort: "order" %}
-  {% for p in items %}
-    {% include work-row.html item=p %}
-  {% endfor %}
-{% endfor %}
+      <section class="section" id="publications">
+        <div class="section-heading">
+          <span class="section-kicker">All Research</span>
+          <h2>Publications</h2>
+          <p class="publication-legend"><sup>*</sup> Equal contribution. Also on <a href="{{ site.author.googlescholar }}">Google Scholar</a>.</p>
+        </div>
+        <div class="publication-grid">
+          {% assign pubs = site.publications | sort: "order" %}
+          {% for p in pubs %}{% include card.html item=p %}{% endfor %}
+        </div>
+      </section>

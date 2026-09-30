@@ -1,11 +1,14 @@
 ---
 title: "Real-time multimodal emotion recognition"
 collection: portfolio
+card_venue: "Independent Project"
+card_year: "2025"
+summary: "Real-time late fusion of face, speech and text emotion signals at 100–300 ms per frame."
 permalink: /projects/multimodal-emotion-recognition/
 redirect_from:
   - /portfolio/portfolio-3/
 group: generative
-order: 6
+order: 14
 year_label: "2025 · independent project"
 teaser: "work/emotion-recognition.jpg"
 teaser_alt: "Real-time multimodal emotion recognition"

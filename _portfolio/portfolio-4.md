@@ -1,11 +1,14 @@
 ---
 title: "MedCLIP-Mini: a compact CLIP for radiology image–text retrieval"
 collection: portfolio
+card_venue: "Independent Project"
+card_year: "2025"
+summary: "A 50M-parameter CLIP-style dual encoder for radiology image–text retrieval on ROCO: R@1 0.28 and R@10 0.55 with a FAISS index."
 permalink: /projects/medclip-mini/
 redirect_from:
   - /portfolio/portfolio-4/
 group: generative
-order: 5
+order: 13
 year_label: "2025 · independent project"
 teaser: "work/medclip.jpg"
 teaser_fit: contain

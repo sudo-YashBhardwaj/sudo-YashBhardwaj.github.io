@@ -1,6 +1,9 @@
 ---
 title: "Tiny-VLA: grounded dig-target guidance for wheel loaders"
 collection: portfolio
+card_venue: "Independent Project"
+card_year: "2026"
+summary: "Qwen3-VL-2B fine-tuned with LoRA on 848 auto-labelled frames to give a wheel loader its next dig target: a bounding box, a spatial instruction and an action token, on one consumer GPU."
 permalink: /projects/tiny-vla/
 group: embodied
 order: 2
