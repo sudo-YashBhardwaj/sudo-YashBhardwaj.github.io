@@ -1655,3 +1655,23 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
     margin-left: 0;
   }
 }
+
+/* Small label text one size up: nothing below 12px. Kept last so it wins over the rules above. */
+.venue,
+.year {
+  font-size: 0.75rem;          /* was 0.66rem (10.6px) */
+}
+
+.section-kicker,
+.hero-eyebrow,
+.fact-label {
+  font-size: 0.78rem;          /* was 0.72rem (11.5px) */
+}
+
+.pub-links a {
+  font-size: 0.85rem;          /* was 0.82rem (13.1px) */
+}
+
+.article-body figcaption {
+  font-size: 0.9rem;           /* was 0.86rem (13.8px) */
+}
