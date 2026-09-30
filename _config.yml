@@ -36,7 +36,7 @@ author:
   job_title        : "MSc student in AI"
   affiliations     : ["École Polytechnique"]
   alumni_of        : ["Inria Paris", "Georgia Institute of Technology", "Birla Institute of Technology and Science, Pilani"]
-  knows_about      : ["Vision-language-action models", "3D perception", "Robot learning", "Multimodal learning", "Diffusion models"]
+  knows_about      : ["Reinforcement learning", "Robot learning", "Vision-language-action models", "3D perception", "World models", "Diffusion models", "Multimodal LLMs"]
 
   # Academic websites
   academia         : # URL
