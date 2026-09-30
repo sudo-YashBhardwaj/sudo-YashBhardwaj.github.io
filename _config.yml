@@ -2,7 +2,7 @@
 
 title            : "Yash Bhardwaj"
 title_separator  : "·"
-description      : "Yash Bhardwaj: MSc student in AI at École Polytechnique, former research intern in the Willow team at Inria Paris. Reinforcement learning, robot learning, 3D perception, diffusion and multimodal LLMs. Papers at KDD 2025 (oral) and an ICCV 2025 workshop."
+description      : "Yash Bhardwaj: MSc student in AI at École Polytechnique, former research intern in the Willow team at Inria Paris. Reinforcement learning, robot learning, representation learning, diffusion and multimodal LLMs. Papers at KDD 2025 (oral) and an ICCV 2025 workshop."
 url              : https://sudo-yashbhardwaj.github.io
 baseurl          : ""
 repository       : "sudo-YashBhardwaj/sudo-YashBhardwaj.github.io"
@@ -21,7 +21,7 @@ author:
   job_title      : "MSc student in AI"
   affiliations   : ["École Polytechnique"]
   alumni_of      : ["Inria Paris", "Georgia Institute of Technology", "Birla Institute of Technology and Science, Pilani"]
-  knows_about    : ["Reinforcement learning", "Robot learning", "Vision-language-action models", "3D perception", "World models", "Diffusion models", "Multimodal LLMs"]
+  knows_about    : ["Reinforcement learning", "Robot learning", "Vision-language-action models", "Representation learning", "World models", "Diffusion models", "Multimodal LLMs"]
 
 # Social-preview image for shared links (in /images/)
 og_image         : "profile-400.jpg"
