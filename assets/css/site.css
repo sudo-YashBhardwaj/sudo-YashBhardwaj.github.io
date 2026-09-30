@@ -1302,19 +1302,40 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
-/* Phones: keep all five nav items on one row */
-@media (max-width: 700px) {
+/* Nav: a centred cluster at every width. It keeps its spacing until the items
+   would no longer fit, then tightens in two steps rather than spreading apart. */
+.site-nav {
+  flex-wrap: nowrap;
+}
+
+.site-nav a {
+  white-space: nowrap;
+}
+
+@media (max-width: 520px) {
   .site-nav {
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    gap: 0;
+    gap: 18px;
+  }
+
+  .site-nav a {
+    font-size: 0.82rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .site-nav {
+    gap: 12px;
   }
 
   .site-nav a {
     font-size: 0.72rem;
     letter-spacing: 0.02em;
-    white-space: nowrap;
   }
+}
+
+/* The rule under the header: a plain line instead of a gradient that fades out at the ends */
+.site-header::after {
+  background: var(--line-strong);
 }
 
 /* Skills: a full-width labelled list under the two experience columns */
@@ -1436,5 +1457,109 @@ a.publication-media:hover {
     display: block;
     overflow-x: auto;
     white-space: nowrap;
+  }
+}
+
+/* ==========================================================================
+   Dark mode
+   A script in _layouts/base.html sets data-theme="dark" or "light" on <html>,
+   from a saved choice or, failing that, the system setting; the button at the
+   end of the nav toggles it. The original stylesheet is built on the :root
+   variables, so most of the page switches with them; the rest are the places
+   that hard-code white.
+   ========================================================================== */
+html[data-theme="dark"] {
+    --bg: #101214;
+    --surface-muted: rgba(138, 180, 248, 0.08);
+    --text: #e6e8eb;
+    --text-soft: #9aa3ad;
+    --heading: #f3f4f6;
+    --line: rgba(230, 232, 235, 0.12);
+    --line-strong: rgba(230, 232, 235, 0.22);
+    --rule: linear-gradient(90deg, rgba(230, 232, 235, 0.28) 0%, rgba(138, 180, 248, 0.14) 48%, rgba(230, 232, 235, 0) 100%);
+    --rule-soft: linear-gradient(90deg, rgba(230, 232, 235, 0.16) 0%, rgba(138, 180, 248, 0.1) 42%, rgba(230, 232, 235, 0) 100%);
+    --rule-full: linear-gradient(90deg, rgba(230, 232, 235, 0) 0%, rgba(138, 180, 248, 0.1) 12%, rgba(230, 232, 235, 0.22) 50%, rgba(138, 180, 248, 0.1) 88%, rgba(230, 232, 235, 0) 100%);
+    --accent: #a8c7fa;
+    --accent-strong: #8ab4f8;
+    --accent-soft: rgba(138, 180, 248, 0.14);
+    --link: #e6e8eb;
+    color-scheme: dark;
+}
+
+html[data-theme="dark"] .site-header {
+  background: rgba(16, 18, 20, 0.92);
+}
+
+html[data-theme="dark"] ::selection {
+  background: rgba(138, 180, 248, 0.3);
+}
+
+/* Figures are drawn on white; keep a light card behind them so they stay legible */
+html[data-theme="dark"] .publication-media,
+html[data-theme="dark"] .article-body figure img {
+  background: #f4f5f7;
+}
+
+html[data-theme="dark"] .article-body figure img {
+  border-color: var(--line);
+}
+
+html[data-theme="dark"] .portrait-card {
+  border-color: var(--line-strong);
+}
+
+html[data-theme="dark"] .article-body pre {
+  background: #181b1f;
+}
+
+html[data-theme="dark"] .todo-note {
+  background: #4a3a00;
+  color: #ffe08a;
+}
+
+/* Theme button at the end of the nav: shows the icon for the mode you would switch to */
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-left: 4px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--text-soft);
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--accent-strong);
+}
+
+.theme-toggle svg {
+  width: 1rem;
+  height: 1rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.theme-toggle .icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-sun {
+  display: block;
+}
+
+html[data-theme="dark"] .theme-toggle .icon-moon {
+  display: none;
+}
+
+@media (max-width: 400px) {
+  .theme-toggle {
+    margin-left: 0;
   }
 }
