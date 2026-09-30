@@ -1302,30 +1302,14 @@ a.publication-media:hover {
   color: var(--text-soft);
 }
 
-/* Facts strip: affiliation and research on the first row, methods and tools on the second */
-.hero-facts-inline {
-  grid-template-areas:
-    "affiliation focus"
-    "methods methods"
-    "tools tools";
+/* Named people and institutions in the bio read as links; credentials stay bold black */
+.hero-lead a {
+  color: var(--accent-strong);
+  font-weight: 600;
 }
 
-.fact-block-methods {
-  grid-area: methods;
-}
-
-.fact-block-tools {
-  grid-area: tools;
-}
-
-@media (max-width: 700px) {
-  .hero-facts-inline {
-    grid-template-areas:
-      "affiliation"
-      "focus"
-      "methods"
-      "tools";
-  }
+.hero-lead a:hover {
+  color: var(--accent);
 }
 
 /* Hero links and the affiliation / research strip, one size up */
