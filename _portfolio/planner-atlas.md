@@ -17,12 +17,6 @@ excerpt: "Pre-registered study of planner-selected error and planner-targeted re
 links:
   - label: "Code"
     url: "https://github.com/sudo-YashBhardwaj/planner-atlas"
-  - label: "Write-up"
-    url: "https://github.com/sudo-YashBhardwaj/planner-atlas/blob/main/docs/writeup.md"
-  - label: "Report"
-    url: "https://github.com/sudo-YashBhardwaj/planner-atlas/blob/main/docs/report.md"
-  - label: "Claims ledger"
-    url: "https://github.com/sudo-YashBhardwaj/planner-atlas/blob/main/docs/results/scientific_ledger.md"
 ---
 
 <figure>

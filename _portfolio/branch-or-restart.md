@@ -17,8 +17,6 @@ excerpt: "Where should an on-policy RL budget go: fresh rollouts, or continuatio
 links:
   - label: "Code"
     url: "https://github.com/sudo-YashBhardwaj/branch-or-restart"
-  - label: "Full report"
-    url: "https://github.com/sudo-YashBhardwaj/branch-or-restart/blob/main/REPORT.md"
 ---
 
 <figure>
