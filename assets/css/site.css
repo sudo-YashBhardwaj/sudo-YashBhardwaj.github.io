@@ -1660,6 +1660,11 @@ html[data-theme="dark"] .theme-toggle .icon-moon {
    which on real phones let sub-pixel rounding push the photo against the bottom of the ring. */
 .portrait-card img {
   object-position: center;
+  /* WebKit resolves the original's height: 100% against the ring's outer height, not the padded
+     inner box, so the photo came out 178 x 200 on iPhones and was clipped at the bottom. Sizing
+     from the width alone gives a square in every engine. */
+  height: auto;
+  aspect-ratio: 1;
 }
 
 /* Small label text one size up: nothing below 12px. Kept last so it wins over the rules above. */
