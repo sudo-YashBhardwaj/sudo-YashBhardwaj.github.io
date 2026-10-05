@@ -12,7 +12,7 @@ locale           : "en-US"
 author:
   name           : "Yash Bhardwaj"
   email          : "yash.bhardwaj@polytechnique.edu"
-  cv             : "/files/Yash_Bhardwaj_VIS.pdf"   # the CV link everywhere; keep this path stable
+  cv             : "/files/Yash_Bhardwaj_CV.pdf"   # the CV link everywhere; /cv/ and /resume redirect here
   googlescholar  : "https://scholar.google.com/citations?hl=en&user=JrVHBGIAAAAJ"
   orcid          : "https://orcid.org/0009-0000-8179-7151"
   github         : "sudo-YashBhardwaj"

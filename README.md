@@ -16,7 +16,7 @@ Personal site of Yash Bhardwaj, built with Jekyll and published by GitHub Pages 
 | Stylesheet | `assets/css/site.css` (adapted from Ye Mao's site, with permission; site-specific rules follow the original block) |
 | Card and page figures | `images/work/` |
 | Originals the figures are cut from (not published) | `_sources/` |
-| CV | `files/Yash_Bhardwaj_VIS.pdf` (linked from `author.cv` in `_config.yml`) |
+| CV | `files/Yash_Bhardwaj_CV.pdf` (linked from `author.cv` in `_config.yml`) |
 
 Author-facing reminders can be left in a page with `{% include todo.html text="..." %}`; they render only
 under `jekyll serve`, never in the published site.
